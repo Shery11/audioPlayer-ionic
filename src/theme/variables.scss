@@ -1,0 +1,283 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+$refresher-icon-color: #ffffff;
+$refresher-text-color: #ffffff;
+$refresher-border-color: none;
+$spinner-ios-dots-color: #ffffff;
+$spinner-md-dots-color: #ffffff;
+$toast-md-background: #D0021B;
+$toast-ios-background: #D0021B;
+$infinite-scroll-loading-color:#ffffff;
+$infinite-scroll-loading-text-color:#ffffff;
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #00B9BA,
+  secondary:  #32db64,
+  danger:     #D0021B,
+  light:      #ffffff,
+  dark:       #000,
+  pink:       #D6407E,
+  facebook: (
+    base: #3b5998,
+    contrast: #ffffff
+  ),
+  warning: (
+    base: #FF7F00,
+    contrast: #ffffff
+  ),
+  signupemail: (
+    base: #00B9BA,
+    contrast: #ffffff
+  ),
+  royal: (
+    base: #7e6ba0,
+    contrast: #ffffff
+  )
+);
+// Sizes
+$bullet_size:12px;
+// Button Minimum Height
+$btn_radious:5px;
+$social_area_size:36px;
+
+// Color
+$dark:#000000;
+$light:#ffffff;
+$alert_bg:#00B9BA;
+$chat_bg:#3CBBD6;
+$alert_btn:rgba(0, 0, 0, .1);
+$border:#ddd;
+$toggle_off:#9B9B9B;
+$free:#FF7F00;
+$testimo:#646464;
+$new:#D6407E;
+$yellow:#EDDB52;
+$segment_r:rgba(255,255,255,.05);
+$border_check:rgba(255,255,255,.7);
+$bg_trans:rgba(255, 255, 255, .3);
+$bg_trans1:rgba(255, 255, 255, .2);
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i');
+$skytree_one:'skytree_one';
+$skytree_two:'skytree_two';
+$skytree_swashes:'skytree_swashes';
+$play_f:'Playfair Display', serif;
+// Font size
+$page_title_size:3rem;
+$fs_sm:1.3rem;
+// Size
+$toggle_inner_size:26px;
+$s10:10px;
+$s20:20px;
+$s30:30px;
+$s40:40px;
+$s50:50px;
+$s60:60px;
+$s70:70px;
+$s80:80px;
+$s90:90px;
+$s100:100px;
+$s120:120px;
+$s150:150px;
+
+// Alert Shadow
+$alert_shadow: 0 $s10 $s30 0 rgba(0,0,0,0.70);
+$gradient_royal: linear-gradient(-180deg, #7E6BA0 0%, #664F8E 100%);
+
+
+// Shadow
+$input_item_border:rgba(255, 255, 255, .5);
+$item_bg:linear-gradient(0deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.14) 100%);
+$delete_btn_bg:linear-gradient(0deg, rgba(255, 255, 255, .08) 0%, rgba(255, 255, 255, .15) 100%);
+$text_title_bg:linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.2) 25%, rgba(0,0,0,0.5) 50%, #000000 100%);
+$item_border:1px solid rgba(255, 255, 255, .1);
+$item_border_dark:1px solid rgba(0, 0, 0, .1);
+$item_border_light:1px solid rgba(255, 255, 255, 0.05);
+$overlay:rgba(0, 0, 0, .3);
+
+
+$item_shadow:0 1px 3px 0 rgba(0, 0, 0, 0.2);
+$item_shadow_md:0 7px 14px 0 rgba(0, 0, 0, 0.3);
+$item_shadow_lg:0 10px 20px 0 rgba(0, 0, 0, 0.4);
+
+$text_shadow:0 1px 5px rgba(0, 0, 0, 0.7);
+$title_shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+$lock_shadow:0 0 $s10 rgba(0,0,0,0.7);
+
+// Radius
+$c_radius:5px;
+$m_radius:10px;
+
+// Image
+$overlay_bg:url(../assets/imgs/overlay-bg.png);
+$popover_arrow:url(../assets/imgs/popover-arrow.svg);
+$mobile_bg:url(../assets/imgs/web/phone.png);
+$help_bg:url(../assets/imgs/web/background-help.png);
+$forward_bg:url("data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%2020'><path%20d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z'%20fill='%23ffffff'/></svg>");
+$progress_rr:url(../assets/imgs/progress-royal-right.svg);
+$progress_rl:url(../assets/imgs/progress-royal-left.svg);
+$progress_dl:url(../assets/imgs/progress-dark-left.svg);
+$progress_dr:url(../assets/imgs/progress-dark-right.svg);
+$progress_pl:url(../assets/imgs/progress-pink-left.svg);
+$progress_pr:url(../assets/imgs/progress-pink-right.svg);
+
+// BG linearGradient
+$gradient_bg_one:linear-gradient(-170deg, #00B9BA 0%, #80699F 49%, #E2387E 100%);
+$gradient_bg_two:linear-gradient(-180deg, #04BEFE 0%, #4481EB 100%);
+$gradient_bg_three:linear-gradient(0deg, #009EFD 0%, #2AF598 100%);
+$gradient_bg_four:linear-gradient(5deg, #F4D03F 0%, #16A085 76%);
+$gradient_bg_five:linear-gradient(-180deg, #F9D423 0%, #E14FAD 100%);
+$gradient_bg_six:linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+$gradient_pink: linear-gradient(-180deg, #E2387E 0%, #A12F5B 100%);
+
+
+// Default
+$gradient_default_one:#00B9BA;
+$gradient_default_two:#80699f;
+$gradient_default_three:#e2387e;
+// Sunset
+$gradient_sunset_one:#3f51b1;
+$gradient_sunset_two:#5a55ae;
+$gradient_sunset_three:#7b5fac;
+$gradient_sunset_four:#8f6aae;
+$gradient_sunset_five:#a86aa4;
+$gradient_sunset_six:#cc6b8e;
+$gradient_sunset_seven:#f18271;
+$gradient_sunset_eight:#f3a469;
+$gradient_sunset_nine:#f7c978;
+// Night Time
+$gradient_nighttime_one:#30cfd0;
+$gradient_nighttime_two:#330867;
+// Serious
+$gradient_serious_one:#09203f;
+$gradient_serious_two:#537895;
+// Bluish
+$gradient_bluish_one:#2cd8d5;
+$gradient_bluish_two:#6b8dd6;
+$gradient_bluish_three:#8e37d7;
+// Violet
+$gradient_violet_one:#667eea;
+$gradient_violet_two:#764ba2;
+// Orange
+$gradient_orange_one:#f09819;
+$gradient_orange_two:#ff5858;
+
+// Alert Bg
+$gradient_alert_one:#E2387E;
+$gradient_alert_two:#A12F5B;
+
+// Facebook btn Bg
+$gradient_facebook_one:#3A589B;
+$gradient_facebook_two:#293E6E;
+
+// success btn Bg
+$gradient_success_one:#E2387E;
+$gradient_success_two:#A12F5B;
+
+// danger btn Bg
+$gradient_danger_one:#A12F5B;
+$gradient_danger_two:#E2387E;
+
+// forms btn Bg
+$gradient_forms_one:#15B4B2;
+$gradient_forms_two:#0E8482;
+
+
+// Royal btn Bg
+$gradient_royal_one:#7E6BA0;
+$gradient_royal_two:#664F8E;
+
+// Dark btn Bg
+$gradient_royal_one:#7E6BA0;
+$gradient_royal_two:#664F8E;
+
+// Trans btn Bg
+$gradient_trans_one:rgba(255, 255, 255, 0.04);
+$gradient_trans_two:rgba(255, 255, 255, 0.14);
+
+
+// card overlay bg
+$gradient_overlay_one: rgba(0, 0, 0, 0.07);
+$gradient_overlay_two:rgba(0,0,0,0.70);
+
+
+
+// Toolbar title padding
+$title_padding:70px;
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$content-ios-padding:$s20;
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+$content-md-padding:$s20;
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+$content-wp-padding:$s20;
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------b
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

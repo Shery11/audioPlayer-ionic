@@ -1,0 +1,176 @@
+page-teams {
+    .page-heading {
+        font-family: $skytree_two;
+        font-size: 4.6rem;
+        text-shadow: $title_shadow;
+    }
+    [commoun-item-bg] {
+        min-height: 10.5rem;
+    }
+    ion-grid {
+        &.grid {
+            padding: 0;
+            ion-row {
+                margin: 0 -1rem;
+                ion-col {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+    .custom-item-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        padding-left: 12rem;
+        position: relative;
+        .content-left-buttons {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 12rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            .input-content {
+                padding-left: 0px;
+                min-width: 7rem;
+                text-align: center;
+                input {
+                    max-width: 4rem;
+                    border: none;
+                    background: none;
+                    min-width: 7rem;
+                    text-align: center;
+                    font-size: 3.8rem;
+                }
+                p {
+                    margin: 0 0 1rem;
+                }
+            }
+            .buttons {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                max-width: 5rem;
+                button {
+                    min-height: 50%;
+                    margin: 0;
+                    border-left: 1px solid rgba(0, 0, 0, 0.10);
+                    border-right: 1px solid rgba(0, 0, 0, 0.10);
+                    border-radius: 0;
+                    &+button {
+                        border-top: 1px solid rgba(0, 0, 0, 0.10);
+                    }
+                }
+            }
+        }
+        .content-right-buttons {
+            width: 100%;
+            padding-right: 5.5rem;
+            p {
+                margin: 0;
+                opacity: .6;
+                font-size: 1.4rem;
+            }
+            h2 {
+                font-size: 2rem;
+                margin: 0;
+                font-weight: 600
+            }
+            ion-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 5.5rem;
+                bottom: 0;
+                background: $item_bg;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                font-size: 5rem;
+            }
+        }
+    }
+    .or-devider {
+        position: relative;
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin: 1rem 0;
+        &:before,
+        &:after {
+            position: absolute;
+            content: "";
+            width: calc(50% - 33px);
+            height: 1px;
+            background: $light;
+            opacity: .3;
+            top: 50%;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
+        }
+    }
+    [ion-item] {
+        &[item-free-trial] {
+            &.item {
+                padding-left: 2rem;
+                h1 {
+                    font-size: 2rem;
+                    color: $light;
+                    font-weight: 600
+                }
+                p {
+                    color: $light;
+                    opacity: .6;
+                }
+                .item-inner {
+                    padding-right: 5.5rem;
+                    background-size: 2rem;
+                    &:before {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 5.5rem;
+                        bottom: 0;
+                        background: $item_bg;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: center;
+                        box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        font-size: 3rem;
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}

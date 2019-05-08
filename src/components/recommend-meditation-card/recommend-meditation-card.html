@@ -1,0 +1,15 @@
+<ion-card mode="md" class="card-shades-bottom fadeIn" (click)="openDetailPage()">
+    <img src="{{meditation.img}}" alt="{{meditation.title}}">
+    <ion-card-content>
+      <div class="current">
+        <p>Recomended {{meditation.getProductName()}}</p>
+        <h2>{{meditation.title}}</h2>
+      </div>
+      <div class="card-title">
+        <img src="assets/imgs/icon-go.svg" img-shadow alt="play">
+        <div class="card-title-inner">
+          <h2>Explore</h2>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>

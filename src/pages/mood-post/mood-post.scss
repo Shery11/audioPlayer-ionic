@@ -1,0 +1,60 @@
+page-mood-post {
+    .dashboard-intro {
+        margin: 2rem 0 2rem 0;
+    }
+    .save {
+      background: $gradient_pink;
+      margin-right: 4px !important;
+    }
+    .wz-save {
+      padding-right: 0
+    }
+    ion-list {
+        ion-item {
+            &.item {
+                &.item-input {
+                    padding-left: 0;
+                    ion-label {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        color: $light;
+                        span {
+                            opacity: .7;
+                            font-weight: 400;
+                        }
+                    }
+                    ion-textarea {
+                      margin: 0 auto;
+                      ::placeholder{
+                        color: $light;
+                      }
+                      textarea {
+                          color: $light;
+                          font-size: 1.6rem;
+                          min-height: 10rem;
+                      }
+                    }
+                }
+            }
+            &[suggation] {
+                &.item {
+                    padding-left: 0;
+                    ion-label {
+                        margin: 0;
+                        p {
+                            color: $light;
+                            opacity: .5;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Custom Modal
+// @media(max-width:768px){
+//     page-mood-post {
+        
+//     }
+// }

@@ -1,0 +1,45 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>The Science</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding no-bounce>
+  <ion-slides pager loop="true" parallax="true" autoplay="3000">
+    <ion-slide>
+      <img src="assets/imgs/stress-1.png">
+      <h2>Stress Reduction</h2>
+      <p>Research shows that mindfulness meditation decreases the levels of the stress hormone “cortisol”, fortifying a sense of calmness throughout the nervous system and the brain.</p>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/anxiety-1.png">
+      <h2>Manage Anxiety</h2>
+      <p>Studies indicate that Mindfulness meditation reduces the grey-matter density in areas of the brain related to anxiety, concluding to be as effective as antidepressants.</p>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/focus-1.png">
+      <h2>Improve Focus</h2>
+      <p>Studies have shown that Mindfulness meditation practitioners have significantly better ability to focus attention and suppress distracting information.</p>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/creativity-1.png">
+      <h2>Increase Creativity</h2>
+      <p>Cognitive Psychology studies have demonstrated that Mindfulness meditation develops divergent thinking, a primary driver of creativity and innovation.</p>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/relationships-1.png">
+      <h2>Improved Relationships</h2>
+      <p>Studies suggest that Mindfulness meditation practitioners have greater empathy and compassion, and feel more satisfied with their personal relationships.</p>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+<!-- <ion-footer mode="ios" no-border *ngIf="isUserAvailable && !user.paid">
+  <ion-toolbar color="dark" unlock-btn>
+    <button ion-item no-lines mode="ios" (click)="openUnlock()">
+      <h2>
+      <ion-icon class="wz-premium premium"></ion-icon>7 Days Free Trial</h2>
+      <p>$59.99 per year after FREE 7-day trial</p>
+    </button>
+  </ion-toolbar>
+</ion-footer> -->

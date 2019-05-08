@@ -1,0 +1,33 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Cancel Subscription</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <div *ngIf="subscription.platform === 'IOS'">
+      <h3>It’s a sad, sad day.</h3>
+      <p> Since you subscribed on an iOS device, you must cancel your subscription on the Apple App Store.</p>
+      <p>Canceling a subscription on iOS:</p>
+      <p>Go to Settings > iTunes &amp; App Store. Tap your Apple ID at the top of the screen. Tap View Apple ID. You might need to sign in or use Touch ID. Tap Subscriptions. Tap the subscription that you want to manage.</p>
+      <p>We hope to see you back one day as we are continuously working to make Welzen the best meditation app in the world.</p>
+    </div>
+    <div *ngIf="subscription.platform === 'Android'">
+      <h3>It’s a sad, sad day.</h3>
+      <p>It’s a sad, sad day. Since you subscribed on an Android device, you must cancel your subscription on the Adroid Play Store.</p>
+      <p>Canceling a subscription on Android:</p>
+      <p>Open the Google Play Store. Tap Menu AccountSubscriptions. Find the subscription you want to cancel. Tap Cancel.</p>
+      <p>We hope to see you back one day as we are continuously working to make Welzen the best meditation app in the world.</p>
+    </div>
+    <div *ngIf="subscription.platform === 'Web'">
+      <h3>It’s a sad, sad day.</h3>
+      <p>It’s a sad, sad day. Since you subscribed on our Web App, you must cancel your subscription on the Web App.</p>
+      <p>Canceling a subscription on Web:</p>
+      <p>Log in to your account on the web app (app.welzen.org). Go to the navigation and click on "Welzen Subscription". At the bottom of this page, you'll see a "Cancel Subscription" button.</p>
+      <p>We hope to see you back one day as we are continuously working to make Welzen the best meditation app in the world.</p>
+    </div>
+  </div>
+  <button ion-button button-trans block mode="ios" (click)="confirmCancel()">Continue</button>
+</ion-content>

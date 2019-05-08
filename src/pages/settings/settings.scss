@@ -1,0 +1,21 @@
+page-settings {
+    ion-list {
+        &.list {
+            margin-bottom: 1.3rem;
+            &+h2{
+                margin-top: 4rem;
+            }
+        }
+    }
+    .color-palette-container{
+        margin-top: 1.5rem;
+        h3{
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+    }
+    h2{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,25 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Invite Users</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <h3>Via email</h3>
+    <p>Enter up to 50 emails separated by comas</p>
+    <ion-list mode="ios" no-lines form-list>
+      <ion-item>
+        <ion-label floating>Emails</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block button-forms mode="ios">Send Invite</button>
+    <h3>How does this work?</h3>
+    <p>An invitation email is sent to the user or users you entered. Once they accept your invitation and create an account, you’ll see them in your dashboard as active.</p>
+    <h3>What happens if they don’t receive the email</h3>
+    <p>First you should check that the user was added correctly to your group, if you entered the wrong email address, you can simply delete the user added and re-invite them following the same proccess.</p>
+    <p>If the email has been entered correctly, simply visit thier detail page and hit the re-send invite button. Make sure you tell the member of your group to check the spam box as this may be the case why they can’t see the invite.</p>
+  </div>
+</ion-content>

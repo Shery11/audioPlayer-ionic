@@ -1,0 +1,223 @@
+page-gift-preview {
+    .page-heading {
+        font-family: $skytree_two;
+        text-shadow: $title_shadow;
+        font-size: 6rem;
+    }
+    p {
+        &.discriptions {
+            font-size: 1rem;
+            opacity: .5;
+        }
+    }
+    .form-content {
+        h4 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+    }
+    ion-grid{
+        &.grid{
+            padding: 0;
+            ion-row{
+                margin: 0 -5px;
+            }
+        }
+    }
+    .price-cards {
+        label {
+            display: block;
+            position: relative;
+            margin: 2rem 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            .price-card {
+                border-radius: $c_radius;
+                -webkit-box-shadow: $item_shadow;
+                box-shadow: $item_shadow;
+                position: relative;
+                padding: 2rem;
+                text-align: center;
+                background: $item_bg;
+                -webkit-transition: all .3s ease;
+                transition: all .3s ease;
+                overflow: hidden;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: 3.2rem;
+                    width: 14rem;
+                    left: -4rem;
+                    top: 2rem;
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    background: $gradient_royal_one;
+                    -webkit-transition: all .3s ease;
+                    transition: all .3s ease;
+                }
+                ion-icon {
+                    position: absolute;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    border-radius: 50%;
+                    border: 2px solid $light;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    font-size: 1.2rem;
+                    right: 1.5rem;
+                    top: 2rem;
+                    opacity: .7;
+                    -webkit-transition: all .3s ease;
+                    transition: all .3s ease;
+                    color: transparent;
+                }
+                .content{
+                    position: relative;
+                    z-index: 9;
+                }
+                p {
+                    margin: 0;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                }
+                h3 {
+                    margin: 0;
+                    font-size: 4rem;
+                    font-weight: 900;
+                }
+            }
+            input {
+                &[type="radio"] {
+                    position: absolute;
+                    left: -99999px;
+                    &:checked {
+                        &+.price-card {
+                            background: -webkit-gradient(linear, left bottom, left top, from($gradient_forms_two), to($gradient_forms_one));
+                            background: linear-gradient(0deg, $gradient_forms_two 0%, $gradient_forms_one 100%);
+                            ion-icon {
+                                color: $light;
+                                opacity: 1;
+                            }
+                            &:before {
+                                background: $new;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .preview-gifts {
+        .title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin: 2rem 0;
+        }
+        .gift-card {
+            border-radius: $c_radius;
+            -webkit-box-shadow: $item_shadow;
+            box-shadow: $item_shadow;
+            padding: 2rem;
+            background: $item_bg;
+            .gift-card-top {
+                border-radius: 5px 5px 0 0;
+                position: relative;
+                padding: 2rem;
+                text-align: center;
+                background: -webkit-gradient(linear, left bottom, left top, from($gradient_forms_two), to($gradient_forms_one));
+                background: linear-gradient(0deg, $gradient_forms_two 0%, $gradient_forms_one 100%);
+                -webkit-transition: all .3s ease;
+                transition: all .3s ease;
+                overflow: hidden;
+                margin: -2rem -2rem 0 -2rem;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: 3.2rem;
+                    width: 14rem;
+                    left: -4rem;
+                    top: 2rem;
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    background: $new;
+                    -webkit-transition: all .3s ease;
+                    transition: all .3s ease;
+                }
+                p {
+                    margin: 0;
+                    font-size: 1.6rem;
+                }
+                h3 {
+                    margin: 0;
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                }
+                h2 {
+                    margin: 2.5rem 0 0 0;
+                    font-family: $skytree_two;
+                    font-size: 4rem;
+                }
+            }
+        }
+        ul {
+            &.what-next {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li {
+                    padding: 1rem 0 1rem 3.5rem;
+                    position: relative;
+                    &:before {
+                        font-family: 'welzen' !important;
+                        content: "\e92a";
+                        opacity: .6;
+                        font-size: 2rem;
+                        position: absolute;
+                        left: .3rem;
+                        top: 1.2rem;
+                    }
+                }
+            }
+        }
+        ion-list {
+            &[form-list] {
+                &.list {
+                    ion-item {
+                        &.item {
+                            h2 {
+                                color: $light;
+                                strong {
+                                    font-weight: 600;
+                                }
+                            }
+                            ion-label {
+                                opacity: 1;
+                                h2 {
+                                    color: $light;
+                                }
+                                p {
+                                    font-size: 1.6rem;
+                                    opacity: .7;
+                                    color: $light;
+                                }
+                            }
+                        }
+                        &:last-child {
+                            &.item {
+                                border: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

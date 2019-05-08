@@ -1,0 +1,58 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Payment</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <ul class="progress-bar-payement" clearfix>
+      <li class="login active">
+        <h2>1
+          <span>Login</span>
+        </h2>
+      </li>
+      <li class="team-name">
+        <h2>2
+          <span>Team name</span>
+        </h2>
+      </li>
+      <li class="payment">
+        <h2>3
+          <span>Payment</span>
+        </h2>
+      </li>
+    </ul>
+
+    <ul clearfix class="pricing">
+      <li col-6>
+        <div class="content">
+          <h2>5</h2>
+          <p>Users </p>
+        </div>
+      </li>
+
+      <li col-6>
+        <div class="content">
+          <h3>$149.97</h3>
+          <p>Per Year </p>
+        </div>
+
+      </li>
+    </ul>
+    <p class="saving" text-center>You are saving 50%</p>
+    <ul clearfix class="pricing">
+      <li>
+        <div class="content">
+          <h3>$49.99</h3>
+          <p>Per Month</p>
+        </div>
+
+      </li>
+    </ul>
+
+    <button ion-button block button-forms mode="ios">Continue - Opens in a browser</button>
+    <button ion-button block button-email clear mode="ios" color="light">Email me a link</button>
+  </div>
+</ion-content>

@@ -1,0 +1,101 @@
+[
+    {
+        "id":2,
+        "css": "page-backgoundimage-12",
+        "thumbCss": "thumb-page-backgoundimage-12",
+        "title": "Summer",
+        "type":"Image"
+    },
+    {
+        "id":3,
+        "css": "page-backgoundimage-05",
+        "thumbCss": "thumb-page-backgoundimage-05",
+        "title": "LGBT",
+        "type":"Image"
+    },
+    {
+        "id":4,
+        "css": "page-backgoundimage-09",
+        "thumbCss": "thumb-page-backgoundimage-09",
+        "title": "Triangles",
+        "type":"Image"
+    },
+    {
+        "id":5,
+        "css": "page-backgoundimage-14",
+        "thumbCss": "thumb-page-backgoundimage-14",
+        "title": "Grape Bubbles",
+        "type":"Image"
+    },
+    {
+        "id":6,
+        "css": "page-backgoundimage-16",
+        "thumbCss": "thumb-page-backgoundimage-16",
+        "title": "Larosa",
+        "type":"Image"
+    },
+    {
+        "id":7,
+        "css": "page-backgoundimage-17",
+        "thumbCss": "thumb-page-backgoundimage-17",
+        "title": "Clouds of wine",
+        "type":"Image"
+    },
+    {
+        "id":8,
+        "css": "page-backgoundimage-18",
+        "thumbCss": "thumb-page-backgoundimage-18",
+        "title": "Ripples",
+        "type":"Image"
+    },
+    {
+        "id":9,
+        "css": "page-backgoundimage-19",
+        "thumbCss": "thumb-page-backgoundimage-19",
+        "title": "Sleepy",
+        "type":"Image"
+    },
+    {
+        "id":10,
+        "css": "page-backgoundimage-20",
+        "thumbCss": "thumb-page-backgoundimage-20",
+        "title": "Aqua",
+        "type":"Image"
+    },
+    {
+        "id":11,
+        "css": "sunset",
+        "title": "Sunset",
+        "type":"Color"
+    },
+    {
+        "id":12,
+        "css": "serious",
+        "title": "Bluish",
+        "type":"Color"
+    },
+    {
+        "id":13,
+        "css": "bluish",
+        "title": "Celestes",
+        "type":"Color"
+    },
+    {
+        "id":14,
+        "css": "violet",
+        "title": "Plumb",
+        "type":"Color"
+    },
+    {
+        "id":15,
+        "css": "orange",
+        "title": "Orange",
+        "type":"Color"
+    },
+    {
+        "id":16,
+        "css": "night-time",
+        "title": "Lilac",
+        "type":"Color"
+    }
+]

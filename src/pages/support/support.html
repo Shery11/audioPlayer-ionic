@@ -1,0 +1,19 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Customer Support</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-500>
+  <p class="mt-0">In order to better assist you, please provide as much detail information as possible!</p>
+  <ion-list mode="ios" no-lines form-list>
+    <ion-item>
+      <ion-label stacked>Comments, issues, suggestions:</ion-label>
+      <ion-textarea type="text"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <button ion-button block button-forms mode="ios">Submit Request</button>
+  </div>
+</ion-content>

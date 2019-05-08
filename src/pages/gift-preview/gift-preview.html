@@ -1,0 +1,78 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span class="logo">
+        <img src="assets/imgs/welzen-logo.svg" alt="">
+      </span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-1225>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <div class="page-heading" text-center>
+            Gift Welzen
+          </div>
+        </ion-col>
+        <ion-col col-12 col-lg-4>
+          <div class="preview-gifts">
+            <div class="title">Preview Your Gift</div>
+            <div class="gift-card">
+              <div class="gift-card-top">
+                <p>Congratulations!</p>
+                <h3>You’ve received a gif!</h3>
+                <h2>1 Year of Welzen</h2>
+              </div>
+              <div class="gift-card-bottom">
+                <p>Hi Jorgito! Esteban just gifted you a Forever premium subscription to Welzen. We're so happy to invite you
+                  to join our meditation app!</p>
+                <button ion-button block button-forms mode="ios" disabled>Redeem Gift Certificate</button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col col-12 col-lg-8>
+          <div class="desktop-right">
+            <div class="preview-gifts">
+              <div class="title">What happens next</div>
+              <ul clearfix class="what-next">
+                <li>You are gifting asdfsadf access to Welzen Premium Forever </li>
+                <li>We are going send the gift certificate with the redemption code to the following email address: asdfa@asdasd.com.
+                </li>
+                <li>We will also send you an email confirmation.</li>
+              </ul>
+              <div class="title">Purchase</div>
+              <ion-list no-lines form-list mode="ios">
+                <ion-item text-wrap>
+                  <h2>Welzen Premium for one year. </h2>
+                  <p>Non-recurring subscription. </p>
+                  <div item-right>
+                    <h2>$59.99</h2>
+                  </div>
+                </ion-item>
+                <ion-item text-wrap>
+                  <h2>50% Discount </h2>
+                  <div item-right>
+                    <h2>- $30.00</h2>
+                  </div>
+                </ion-item>
+                <ion-item text-wrap>
+                  <h2>Total</h2>
+                  <div item-right>
+                    <h2>
+                      <strong>$29.99</strong>
+                    </h2>
+                  </div>
+                </ion-item>
+              </ion-list>
+              <button ion-button max-width-335 button-forms block mode="ios">Purchase</button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Profile</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <h3>Hey buddy, you belong here.</h3>
+    <p>You are currently subscribed to Welzen Premium.</p>
+    <div *ngIf="isSubsAvailable && !subscription.toBeCancelled">
+      <p>{{getMessage()}}</p>
+      <p>{{getMessagePlatform()}}</p>
+      <p>{{getMessageForever()}}</p>
+    </div>
+    <div *ngIf="isSubsAvailable && subscription.toBeCancelled">
+        <p>{{getMessageCancelled()}}</p>
+      </div>
+    <ion-spinner name="dots" *ngIf="!isSubsAvailable"></ion-spinner>
+    <button *ngIf="isSubsAvailable && !subscription.toBeCancelled && !hasForeverSubsription()" ion-button button-trans block mode="ios" (click)="cancelSubs()">Cancel Subscription</button>
+  </div>
+</ion-content>

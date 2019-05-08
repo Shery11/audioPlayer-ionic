@@ -1,0 +1,19 @@
+<div class="pro-card" clearfix  (click)="play($event)" >
+  <div class="bg-img"  [ngStyle]="{'background-image': 'url(' + (media.albumCoverImg) + ')'}"></div>
+  <div class="pro-card-inner">
+    <!-- <div class="tags">
+      <ion-icon class="wz-feature-no-solid" (click)="tryToRemove($event)"> </ion-icon>
+    </div> -->
+    <div class="play-buttonover-card">
+    <!-- <div> -->
+        <img src="assets/imgs/icon-play.svg" img-shadow>
+    </div>
+    <div class="card-title">
+      <div class="title-inner">
+        <h2>{{media.title}}</h2>
+        <p *ngIf='!media.isSingleMeditation()'>{{media.productTitle}}</p>
+        <p *ngIf='media.isSingleMeditation()'>{{media.length}} min</p>
+      </div>
+    </div>
+  </div>
+</div>

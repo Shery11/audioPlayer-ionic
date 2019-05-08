@@ -1,0 +1,61 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-buttons start>
+      <button ion-button clear color="{{mediaPlay.isFav ?'danger': 'light'}}" *ngIf="showFavorite()" (click)="checkFavourite()">
+        <ion-icon class="wz-favorite" *ngIf="!mediaPlay.changingStateFav; else changeFav" ></ion-icon>
+        <ng-template #changeFav>
+          <ion-spinner name="dots"></ion-spinner>
+        </ng-template>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="close()">
+        <ion-icon class="wz-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div class="page-title fadeInDown" text-center>{{mediaPlay.title}}</div>
+  <div class="player-main-container">
+    <div class="player-content">
+      <ion-item mode="ios" no-bg no-lines text-center fadeInDown *ngIf="loadingMedia"> 
+        <h1>Take a deep breath</h1>
+        <p>We are loading your meditation</p>
+        <img src="assets/imgs/typing.svg" alt="loading">
+      </ion-item>
+      <ion-item mode="ios" no-bg no-lines text-center *ngIf="!loadingMedia">
+        <button ion-button mode="ios" clear color="light" class="fadeInLeft" clear btn-ra icon-only item-left (click)="rewind()">
+          <ion-icon class="wz-icon-backwards"></ion-icon>
+        </button>
+        <button ion-button mode="ios" clear color="light" class="fadeInDown" clear icon-only btn-pp (click)="play()">
+          <ion-icon class="wz-icon-new-play" [hidden]='isPlaying'></ion-icon>
+          <ion-icon class="wz-icon-new-stop" [hidden]='!isPlaying' ></ion-icon>
+        </button>
+        <button ion-button mode="ios" clear color="light" class="fadeInRight" clear btn-ra icon-only item-right  (click)="forward()">
+          <ion-icon class="wz-icon-forward"></ion-icon>
+        </button>
+      </ion-item>
+      <ion-item mode="ios" no-bg no-lines text-center item-time class="fadeInUp" *ngIf="!loadingMedia">
+        <h3>{{currentPosition | timeMeditation}}</h3>
+      </ion-item>
+    </div>
+  </div>
+
+</ion-content>
+<ion-footer mode="ios" no-bg no-border  *ngIf="!mediaPlay.hasSound && showVolumeControls && !loadingMedia"  [ngClass]="backgroundCss" >
+  <ion-toolbar mode="ios" class="fadeInUp">
+    <ion-item mode="ios" no-bg no-lines>
+      <ion-range (ionChange)="setVolume()" color="warning" min="0" max="100" step="1" [(ngModel)]="volume">
+      </ion-range>
+    </ion-item>
+    <ion-item mode="ios" no-bg no-lines height-auto>
+      <button ion-button mode="ios" clear color="light" item-left>
+        <ion-icon class="wz-voice"></ion-icon>
+      </button>
+      <button ion-button mode="ios" button-trans item-right (click)="openSoundsOptionsModal()">
+        <ion-icon class="wz-sound"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

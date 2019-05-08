@@ -1,0 +1,89 @@
+page-after-share {
+    .page-title {
+        h2 {
+            font-family: $skytree_one;
+            text-shadow: $title_shadow;
+            font-size: 5rem;
+        }
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    .dailyhappiness-card {
+        position: relative;
+        .bg-img {
+            min-height: 335px;
+            border-radius: $c_radius;
+            -webkit-box-shadow: $item_shadow;
+            box-shadow: $item_shadow;
+            background-size: cover;
+            background-position: center center;
+        }
+        .card-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: $c_radius;
+        }
+        .dailyhappiness-card-inner {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            padding: 2rem;
+            text-align: center;
+            h4 {
+                font-size: 1.4rem;
+                text-shadow: $text_shadow;
+            }
+            .app-logo {
+                position: absolute;
+                bottom: 1.2rem;
+                left: 0;
+                right: 0;
+                img {
+                    height: 18px;
+                }
+            }
+        }
+    }
+    ion-grid {
+        &[pro-cards] {
+            padding: 0;
+            ion-row {
+                ion-col {
+                    padding-bottom: 0
+                }
+            }
+        }
+    }
+    .share {
+        margin-top: 3rem;
+        h5 {
+            margin: 0;
+            font-weight: 400;
+            font-size: 1.8rem;
+        }
+        ul {
+            margin: 1.5rem 0 1.5rem;
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                ion-icon {
+                    font-size: 1.6rem;
+                    border: 3px solid $light;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+  <ion-card mode="ios" card-pink class="fadeIn">
+      <ion-card-content>
+        <ion-item mode="ios" no-lines>
+          Meditation - {{meditation.beginTime | date: 'shortTime'}}
+          <!-- <button item-right ion-button clear color="light">
+            <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+          </button> -->
+        </ion-item>
+        <div class="bottom-content">
+          <div class="title-daily">
+            <img src="assets/imgs/icon-happy-face-daily.svg" img-shadow alt="">
+            <h2 text-center text-lowercase>{{meditation.title}}</h2>
+            <p text-center>Daily Meditation</p>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>

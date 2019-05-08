@@ -1,0 +1,310 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">Relationships</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        <ion-icon class="wz-favorite"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-1225 responsive-view>
+    <div class="content-left">
+      <div class="hero-banner" clearfix>
+        <img src="assets/imgs/covers/relationships.jpg" alt="Relationships">
+        <div class="card-overlay"></div>
+        <div class="hero-banner-inner">
+          <h2>Relationships</h2>
+          <div class="hero-banner-footer">
+            <ion-item no-bg no-lines>
+              <div item-left>
+                <button ion-button btn-danger mode="ios" color="danger">
+                  <ion-icon ios="ios-play" md="md-play"></ion-icon>
+                </button>
+              </div>
+              <h2>Play Intro</h2>
+              <button ion-button clear item-right clear icon-only mode="ios" color="light">
+                <ion-icon class="wz-icon-download1"></ion-icon>
+              </button>
+              <button ion-button clear item-right clear icon-only mode="ios" color="light">
+                <ion-icon class="wz-icon-share1"></ion-icon>
+              </button>
+            </ion-item>
+            <div class="progress-bar" clearfix>
+              <div class="progress-inner" style="width:35%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="section-item" hideWhen="desktop">
+        <ion-list no-lines mode="ios" list-custom>
+          <ion-item mode="md">
+            <ion-label>
+              <h2>Available Offline</h2>
+            </ion-label>
+            <ion-toggle mode="md" custom-toggle checked="false"></ion-toggle>
+          </ion-item>
+        </ion-list>
+      </div> -->
+      <div class="techniques-used">
+        <div class="techniques-used-title">
+          Meditation techniques used in this program
+        </div>
+        <ul class="techniques-used-inner" clearfix>
+
+          <li>
+            <a (click)="openTechniquesModal()">
+              <div class="technique">
+                <ion-icon class="wz-play-btn"></ion-icon>
+                <h6>Breathing</h6>
+              </div>
+            </a>
+
+          </li>
+
+          <li>
+            <a (click)="openTechniquesModal()">
+              <div class="technique">
+                <ion-icon class="wz-play-btn"></ion-icon>
+                <h6>Visualization</h6>
+              </div>
+            </a>
+          </li>
+
+
+          <li>
+            <a (click)="openTechniquesModal()">
+              <div class="technique">
+                <ion-icon class="wz-play-btn"></ion-icon>
+                <h6>Body Scan</h6>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a (click)="openTechniquesModal()">
+              <div class="technique">
+                <ion-icon class="wz-play-btn"></ion-icon>
+                <h6>Breathing</h6>
+              </div>
+            </a>
+          </li>
+
+
+          <li>
+            <a (click)="openTechniquesModal()">
+              <div class="technique">
+                <ion-icon class="wz-play-btn"></ion-icon>
+                <h6>Breathing</h6>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="content-right" padding>
+      <ion-list mode="ios" no-lines exercise-list>
+        <div class="sectopn-heading icon-right" clearfix>
+          <h2 class="card-heading">Day 1</h2>
+          <ion-icon icon-right class="wz-save"></ion-icon>
+        </div>
+        <div class="list-item">
+          <div class="discription">
+            <h2>Be a better partner</h2>
+            <p>Today we are going to cultivate listening skills that will help you understand and accomodate your partner's needs</p>
+          </div>
+        </div>
+
+
+        <div class="list-item" clearfix>
+          <ion-card mode="ios" (click)="openTechniquesModal()">
+            <div class="card-overlay"></div>
+            <ion-item text-wrap mode="ios">Cultivating listening skills
+              <ion-icon item-right class="wz-lock "></ion-icon>
+            </ion-item>
+            <img src="assets/imgs/covers/kindness-for-oneself.jpg" alt="">
+            <ion-card-content>
+              <img src="assets/imgs/icon-play.svg" alt="">
+              <p text-center>Video Training - 10 min</p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+
+
+        <div class="list-item" (click)="openTechniquesModal()">
+          <div class="tags">
+            <span class="new">NEW</span>
+            <span class="free">FREE</span>
+          </div>
+          <ion-item no-lines mode="ios" bg-fade class="listened no">
+            <img item-left class="img-icon" src="assets/imgs/icon-play.svg" alt="">
+            <h2>Exercise 1</h2>
+            <div item-right>
+              <span>10 min</span>
+              <button ion-button clear color="light">
+                <ion-icon class="wz-right-arrow"></ion-icon>
+              </button>
+            </div>
+          </ion-item>
+        </div>
+
+
+        <div class="list-item">
+          <ion-item no-lines mode="ios" bg-fade class="listened yes">
+            <img item-left class="img-icon" src="assets/imgs/icon-play.svg" alt="">
+            <h2>Exercise 2</h2>
+            <div item-right>
+              <span>10 min</span>
+              <button ion-button clear color="light">
+                <ion-icon class="wz-right-arrow"></ion-icon>
+              </button>
+            </div>
+          </ion-item>
+        </div>
+      </ion-list>
+
+      <ion-list mode="ios" no-lines exercise-list>
+        <div class="sectopn-heading icon-right" clearfix>
+          <h2 class="card-heading">Day 2</h2>
+          <ion-icon icon-right class="wz-lock"></ion-icon>
+        </div>
+        <div class="list-item">
+          <div class="discription">
+            <h2>Title of the day!</h2>
+            <p>Got together, had a child and named him Welzen. We started this company because we believe we can become. Blame
+              is the projection of what we see as inadequate within ourselves. But with mindfulness, we can become aware
+              of these.
+            </p>
+          </div>
+        </div>
+        <div class="list-item" clearfix>
+          <ion-card mode="ios">
+            <div class="card-overlay"></div>
+            <ion-item text-wrap mode="ios">Should we get comfortable with death?
+              <ion-icon item-right class="wz-lock"></ion-icon>
+            </ion-item>
+            <img src="assets/imgs/covers/vids/female-guidance.png" alt="">
+            <ion-card-content>
+              <img src="assets/imgs/icon-play.svg" alt="">
+              <p text-center>Video Training - 10 min</p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+        <div class="list-item">
+          <div class="tags">
+            <!-- <span class="new">NEW</span> -->
+            <span class="free">FREE</span>
+          </div>
+          <ion-item no-lines mode="ios" bg-fade class="listened yes">
+            <img item-left class="img-icon" src="assets/imgs/icon-play.svg" alt="">
+            <h2>Exercise 1</h2>
+            <div item-right>
+              <span>10 min</span>
+              <button ion-button clear color="light">
+                <ion-icon class="wz-right-arrow"></ion-icon>
+              </button>
+            </div>
+          </ion-item>
+        </div>
+
+      </ion-list>
+
+
+
+      <ion-list mode="ios" no-lines exercise-list>
+        <div class="sectopn-heading icon-right" clearfix>
+          <h2 class="card-heading">Leadership</h2>
+          <ion-icon icon-right class="wz-save"></ion-icon>
+        </div>
+
+
+        <div class="list-item">
+          <div class="tags">
+            <span class="new">NEW</span>
+            <!-- <span class="free">FREE</span> -->
+          </div>
+          <ion-item no-lines mode="ios" bg-fade class="listened yes" ion-item-multiaction>
+            <div class="left-button" (click)="openTechniquesModal()">
+              <img class="img-icon" src="assets/imgs/icon-play.svg" alt="">
+              <h2>Respiracion</h2>
+              <span>10 min</span>
+            </div>
+
+            <div item-right (click)="showAlert()">
+
+              <button ion-button clear color="light">
+                <ion-icon class="wz-favorite"></ion-icon>
+              </button>
+            </div>
+          </ion-item>
+        </div>
+
+        <div class="list-item">
+          <ion-item no-lines mode="ios" bg-fade class="listened no" ion-item-multiaction>
+            <div class="left-button" (click)="openTechniquesModal()">
+              <img class="img-icon" src="assets/imgs/download.svg" alt="">
+              <h2>Autoestima</h2>
+              <span>10 min</span>
+            </div>
+
+            <div item-right (click)="showAlert()">
+              <button ion-button clear color="primary">
+                <ion-icon class="wz-favorite"></ion-icon>
+              </button>
+            </div>
+          </ion-item>
+        </div>
+
+        <div class="list-item" clearfix>
+          <ion-card mode="ios">
+            <div class="card-overlay"></div>
+            <ion-item text-wrap mode="ios">Should we get comfortable with death?
+              <ion-icon item-right class="wz-lock"></ion-icon>
+            </ion-item>
+            <img src="assets/imgs/covers/vids/female-guidance.png" alt="">
+            <ion-card-content>
+              <img src="assets/imgs/icon-play.svg" alt="">
+              <p text-center>Video Training - 10 min</p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+
+        <div class="list-item">
+          <div class="tags">
+            <!-- <span class="new">NEW</span> -->
+            <span class="free">FREE</span>
+          </div>
+          <ion-item no-lines mode="ios" bg-fade class="listened yes">
+            <img item-left class="img-icon" src="assets/imgs/icon-play.svg" alt="">
+            <h2>Exercise 1</h2>
+            <div item-right>
+              <span>10 min</span>
+              <button ion-button clear color="light">
+              </button>
+            </div>
+          </ion-item>
+        </div>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
+<!-- <ion-footer mode="ios" no-border>
+  <ion-toolbar color="primary" unlock-btn>
+    <button ion-item no-lines mode="ios">
+      <h1>Start this program</h1>
+      <h1>Play next: Day 2</h1>
+      <p>Your partner's mind - Vid. 10 min</p>
+    </button>
+  </ion-toolbar>
+</ion-footer> -->
+<!-- <ion-footer mode="ios" no-border *ngIf="isUserAvailable && !user.paid">
+  <ion-toolbar color="dark" unlock-btn>
+    <button ion-item no-lines mode="ios" (click)="openUnlock()">
+      <h2>
+      <ion-icon class="wz-premium premium"></ion-icon>7 Days Free Trial</h2>
+      <p>$59.99 per year after FREE 7-day trial</p>
+    </button>
+  </ion-toolbar>
+</ion-footer> -->

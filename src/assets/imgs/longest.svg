@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="30px" viewBox="0 0 25 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>longest</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.699999988">
+        <g id="Profile" transform="translate(-287.000000, -130.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-5" transform="translate(20.000000, 115.000000)">
+                <g id="longest" transform="translate(267.000000, 15.000000)">
+                    <path d="M17.5,0 L13.75,11.25 L25,11.25 L22.6675,13.75 L4.6675,13.75 L17.5,0 Z M20.33375,16.25 L2.33375,16.25 L0,18.75 L11.25,18.75 L7.5,30 L20.33375,16.25 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

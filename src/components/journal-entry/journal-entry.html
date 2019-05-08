@@ -1,0 +1,20 @@
+<ion-card mode="ios" class="fadeIn">
+    <ion-card-content>
+      <ion-item mode="ios" no-lines>
+        Journal Entry - {{meditation.beginTime | date: 'HH:mm'}}
+        <!-- <button item-right ion-button clear color="light">
+          <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+        </button> -->
+      </ion-item>
+
+      <div class="bottom-content">
+        <!-- <div class="title" *ngIf="isMoodCheckAvailable">
+          <img src="assets/imgs/profile-journal.svg" alt="">
+          <h2>Journal Entry</h2>
+        </div> -->
+        <div class="content" *ngIf="isMoodCheckAvailable">
+          <p>{{moodCheck.journal}}</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>

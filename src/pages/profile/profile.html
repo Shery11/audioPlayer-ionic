@@ -1,0 +1,92 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Stats & Feed</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+
+  <div max-width-960 responsive-view>
+    <div class="content-left">
+      <h2 class="sub-titles">Meditation Stats</h2>
+      <ul clearfix class="statistic-stutas fadeInUp">
+        <li>
+          <img src="assets/imgs/sessions.svg" alt="sessions">
+          <h2  class="fadeIn" *ngIf="isSummaryStatsAvailable" >{{statsSummary.totalSession}}</h2>
+          <div><ion-spinner name="dots" *ngIf="!isSummaryStatsAvailable"></ion-spinner></div>
+          <p>Sessions</p>
+          <!-- <p>Total
+            <br> sessions
+          </p> -->
+        </li>
+        <li>
+          <img src="assets/imgs/time.svg" alt="time">
+          <h2 class="fadeIn" *ngIf="isSummaryStatsAvailable && statsSummary.totalSeconds < 3600 ">{{statsSummary.totalSecondsInDate  | date:'mm' }}<span>m </span>{{statsSummary.totalSecondsInDate | date:'ss'}}<span>s</span></h2>
+          <h2 class="fadeIn" *ngIf="isSummaryStatsAvailable && statsSummary.totalSeconds >= 3600">{{statsSummary.totalSecondsInDate  | date:'HH' }}<span>h </span>{{statsSummary.totalSecondsInDate | date:'mm'}}<span>m</span></h2>
+          <div><ion-spinner name="dots" *ngIf="!isSummaryStatsAvailable"></ion-spinner></div>
+          <p>Meditating</p>
+          <!-- <p>Time
+            <br> meditating
+          </p> -->
+        </li>
+        <li>
+          <img src="assets/imgs/longest.svg" alt="streak">
+          <h2 class="fadeIn" *ngIf="isSummaryStatsAvailable">{{statsSummary.days}} days</h2>
+          <div><ion-spinner name="dots" *ngIf="!isSummaryStatsAvailable"></ion-spinner></div>
+          <p>Streak</p>
+          <!-- <p>Longest
+            <br> streak
+          </p> -->
+        </li>
+      </ul>
+      <h2 class="sub-titles">Total Mood Checks</h2>
+      <ul clearfix class="total-mood-checks fadeInUp">
+        <li *ngFor="let mood of moodChecks">
+          <div class="mood-type">
+            <img src="{{mood.icon}}" alt="">
+            <h2 class="fadeIn" *ngIf="isMoodCheckAvailable">{{mood.count}}</h2>
+            <ion-spinner name="dots" *ngIf="!isMoodCheckAvailable"></ion-spinner>
+            <p>{{mood.mood}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="content-right">
+      <h2 class="sub-titles" #feedContent>Emotional feed</h2>
+      <ng-container *ngIf='isStatsAvailable' >
+        <ng-container *ngIf='stats.length > 0 ; else emptyStats'>
+            <div *ngFor='let meditationsByDate of stats'>
+                <h3  class="sub-sub-titles">{{meditationsByDate.date | date: 'fullDate'}}</h3>
+                  <div *ngFor='let meditation of meditationsByDate.meditations'>
+                    <mood-check-entry *ngIf="ifAMoodCheck(meditation)" [meditation]="meditation"></mood-check-entry>
+                    <mood-check-journal-entry *ngIf="ifAMoodJournalCheck(meditation)" [meditation]="meditation"></mood-check-journal-entry>
+                    <journal-entry *ngIf="ifAJournalCheck(meditation)" [meditation]="meditation" ></journal-entry>
+                    <meditation-entry *ngIf="ifAMeditation(meditation)" [meditation]="meditation" (playEvent)="goToPlay($event)"> </meditation-entry>
+                    <meditation-daily-entry *ngIf="ifADailyMeditation(meditation)" [meditation]="meditation"> </meditation-daily-entry>
+                  </div>
+            </div>
+        </ng-container>
+        <ng-template #emptyStats>You haven't logged any activity yet. The emotional feed will display your history of meditations, mood checks, and journal entries.</ng-template>
+      </ng-container>
+      <ng-container *ngIf='!isStatsAvailable'>
+          <div text-center><ion-spinner name="dots" *ngIf="!isStatsAvailable"></ion-spinner></div>
+      </ng-container>
+
+      <ion-infinite-scroll (ionInfinite)="searchMoreStats($event)">
+        <ion-infinite-scroll-content
+        loadingSpinner="dots"
+        loadingText="Loading your feed...">
+        ></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+
+    </div>
+  </div>
+</ion-content>
+<ion-footer mode="ios" no-border>
+  <ion-toolbar color="primary" unlock-btn>
+    <button ion-item no-lines mode="ios" (click)="openDashboardPage()">
+      <h1>Continue to meditations</h1>
+    </button>
+  </ion-toolbar>
+</ion-footer>

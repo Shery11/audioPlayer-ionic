@@ -1,0 +1,139 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">{{meditation.title}}</ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only color="light">
+        <ion-icon class="wz-favorite"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-1225 responsive-view>
+    <div class="content-left">
+      <div class="hero-banner" clearfix>
+        <img src="{{meditation.img}}" alt="{{meditation.title}}">
+        <div class="card-overlay"></div>
+        <div class="hero-banner-inner">
+          <h2>{{meditation.title}}</h2>
+          <div class="hero-banner-footer">
+            <ion-item no-bg no-lines *ngIf="hasMediaIntro">
+              <div item-left>
+                <button  *ngIf="!playingMediaIntro && !loadingMediaIntro" ion-button btn-danger mode="ios" color="danger" (click)="playIntro()">
+                  <ion-icon ios="ios-play" md="md-play"></ion-icon>
+                </button>
+                <ion-spinner name="dots" *ngIf="loadingMediaIntro"></ion-spinner>
+                <button *ngIf="playingMediaIntro && !loadingMediaIntro" ion-button btn-danger mode="ios" color="danger" (click)="pauseIntro()">
+                    <ion-icon ios="ios-pause" md="md-pause"></ion-icon>
+                </button>
+              </div>
+              <h2>Play Intro</h2>
+              <!--
+              <button ion-button clear item-right clear icon-only mode="ios" color="light">
+                <ion-icon class="wz-icon-download1"></ion-icon>
+              </button>
+              <button ion-button clear item-right clear icon-only mode="ios" color="light">
+                <ion-icon class="wz-icon-share1"></ion-icon>
+              </button>
+              -->
+            </ion-item>
+            <!--
+            <div class="progress-bar" clearfix>
+              <div class="progress-inner" style="width:35%"></div>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+      <!-- <div class="section-item" hideWhen="desktop">
+        <ion-list no-lines mode="ios" list-custom>
+          <ion-item mode="md">
+            <ion-label>
+              <h2>Available Offline</h2>
+            </ion-label>
+            <ion-toggle mode="md" custom-toggle checked="false"></ion-toggle>
+          </ion-item>
+        </ion-list>
+      </div> -->
+      <!-- <div class="techniques-used">
+        <div class="techniques-used-title">
+          Meditation techniques used in this program
+        </div>
+        <ul class="techniques-used-inner" clearfix>
+
+          <li>
+            <a (click)="openTechniquesModal()">
+              <div class="technique">
+                <ion-icon class="wz-play-btn"></ion-icon>
+                <h6>Breathing</h6>
+              </div>
+            </a>
+
+          </li>
+
+          <li>
+            <a (click)="openTechniquesModal()">
+              <div class="technique">
+                <ion-icon class="wz-play-btn"></ion-icon>
+                <h6>Visualization</h6>
+              </div>
+            </a>
+          </li>
+
+
+          <li>
+            <a (click)="openTechniquesModal()">
+              <div class="technique">
+                <ion-icon class="wz-play-btn"></ion-icon>
+                <h6>Body Scan</h6>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a (click)="openTechniquesModal()">
+              <div class="technique">
+                <ion-icon class="wz-play-btn"></ion-icon>
+                <h6>Breathing</h6>
+              </div>
+            </a>
+          </li>
+
+
+          <li>
+            <a (click)="openTechniquesModal()">
+              <div class="technique">
+                <ion-icon class="wz-play-btn"></ion-icon>
+                <h6>Breathing</h6>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div> -->
+    </div>
+    <div class="content-right" padding>
+      <ion-list mode="ios" no-lines exercise-list>
+        <div class="list-item" clearfix *ngFor="let media of meditation.medias">
+          <media-row-program-play *ngIf="isUserAvailable && !media.isIntro" [media]="media" [user]="user" (playEvent)="play($event)"  (addFavEvent)="addFav($event)" (unlockEvent)='openUnlock()'></media-row-program-play>
+        </div>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
+<!--<ion-footer mode="ios" no-border>
+  <ion-toolbar color="primary" unlock-btn>
+    <button ion-item no-lines mode="ios">
+      <h1>Play next: Day 2</h1>
+      <p>Listening - 10 Min</p>
+    </button>
+  </ion-toolbar>
+</ion-footer>-->
+<!-- <ion-footer mode="ios" no-border *ngIf="isUserAvailable && !user.paid">
+  <ion-toolbar color="dark" unlock-btn>
+    <button ion-item no-lines mode="ios" (click)="openUnlockMobileModal()">
+      <h2>
+        <ion-icon class="wz-premium premium"></ion-icon>7 Days Free Trial</h2>
+    </button>
+  </ion-toolbar>
+</ion-footer> -->

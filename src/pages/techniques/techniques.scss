@@ -1,0 +1,26 @@
+page-techniques {
+    ion-grid {
+        &[pro-cards] {
+            padding: 0;
+            ion-row {
+                ion-col {
+                    .pro-card {
+                        min-height: 335px;
+                        box-shadow: $item_shadow;
+                        .pro-card-inner {
+                            .play-buttonover-card {
+                                img {
+                                    width: $s50;
+                                    height: $s50;
+                                }
+                            }
+                        }
+                        .bg-img {
+                            background-position: top center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

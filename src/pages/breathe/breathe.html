@@ -1,0 +1,37 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Breathe</span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="openBreatheSettingsModal()">
+        <ion-icon class="wz-settting"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div class="breathe-continer">
+    <div class="breathe-card">
+      START
+    </div>
+  </div>
+  <!-- <ion-list mode="ios" no-lines no-bg>
+    <ion-item mode="ios" text-wrap>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/guided-free.svg">
+      </ion-thumbnail>
+      <h2>Free Meditation App</h2>
+      <p>Download Welzen today and discover the power of meditation.</p>
+    </ion-item>
+  </ion-list> -->
+</ion-content>
+<!-- <ion-footer mode="ios" no-border>
+  <ion-toolbar color="dark" unlock-btn>
+    <button ion-item no-lines mode="ios" (click)="openUnlock()">
+      <h2>
+      <ion-icon class="wz-premium premium"></ion-icon>7 Days Free Trial</h2>
+      <p>$59.99 per year after FREE 7-day trial</p>
+    </button>
+  </ion-toolbar>
+</ion-footer> -->

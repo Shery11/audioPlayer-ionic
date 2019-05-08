@@ -1,0 +1,27 @@
+<!-- Generated template for the MeditationCardComponent component -->
+<div class="pro-card fadeIn" clearfix [ngClass]="{active:isCellSelected}" (click)="openDetailPage(meditation)">
+  <div class="bg-img" [ngStyle]="{'background-image': 'url(' + (meditation.img) + ')'}"></div>
+  <div class="pro-card-inner">
+    <div class="tags">
+      <!-- {{meditation.free}} -->
+      <span *ngIf="meditation.new" class="new">NEW</span>
+      <span *ngIf="meditation.free" class="free">FREE</span>
+      <ion-icon *ngIf="meditation.lock && !user.paid" class="wz-premium"></ion-icon>
+    </div>
+    <div *ngIf="meditation.play" class="play-buttonover-card">
+      <img src="assets/imgs/icon-play.svg" img-shadow>
+    </div>
+    <div class="card-title">
+      <div class="title-inner">
+        <h2>{{meditation.title}}</h2>
+        <p *ngIf="!meditation.isProgram()"> {{meditation.lengthOfMedias}} {{meditation.lengthOfMedias === 1 ? "Meditation" :"Meditations"}}</p>
+        <p *ngIf="meditation.isProgram()"> {{meditation.lengthOfMedias}} {{meditation.lengthOfMedias === 1 ? "Day" :"Days"}}</p>
+
+        <!-- <p>{{meditation.description}}</p> -->
+        <!-- <div class="progress-bar" clearfix>
+          <div class="progress-inner" style="width:35%"></div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+page-science {
+  ion-slides {
+    &.slides {
+      .swiper-container-horizontal {
+          .swiper-pagination-bullet {
+            background: $light;
+            &.swiper-pagination-bullet-active {
+              background: $light;
+            }
+          }
+      }
+      .slide-zoom {
+        h2 {
+          font-family: $skytree_one;
+          text-shadow: $title_shadow;
+          color: $light;
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+}

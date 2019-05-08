@@ -1,0 +1,114 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Settings</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <!-- <h2>Group Settings</h2>
+    <ion-list mode="ios" no-lines button-list>
+      <button ion-item mode="ios" (click)="openTeamsDashboardPage()">
+        <ion-icon class="wz-work" item-left></ion-icon>View Dashboard</button>
+      <button ion-item mode="ios">
+        <ion-icon class="wz-icon-users" item-left></ion-icon>Manage Users</button>
+      <button ion-item mode="ios">
+        <ion-icon class="wz-icon-manage-account" item-left></ion-icon>Manage Group Account</button>
+    </ion-list> -->
+
+    <!-- <h2>App Settings</h2> -->
+    <div class="color-palette-container">
+      <h3>Welzen background color</h3>
+      <div clearfix class="color-palette">
+        <button  ion-button mode="ios" *ngFor="let thm of themes | slice:0:5" [ngClass]='thm.css + " " + isCurrentTheme(thm)'  (click)="changeTheme(thm)">
+
+        </button>
+        <!-- <button ion-button mode="ios" class="active default"></button>
+        <button ion-button mode="ios" class="sunset"></button>
+        <button ion-button mode="ios" class="night-time"></button>
+        <button ion-button mode="ios" class="serious"></button>
+        <button ion-button mode="ios" class="bluish"></button> -->
+        <button ion-button mode="ios" class="add-from-theme" (click)="openChangeThemePage()">
+          <ion-icon class="wz-plus"></ion-icon>
+        </button>
+      </div>
+    </div>
+    <ion-list mode="ios" no-lines button-list>
+      <!-- <button ion-item mode="ios" (click)="openDownloadManagerPage()">
+        <ion-icon class="wz-download-mng" item-left></ion-icon>Download Manager</button> -->
+      <button ion-item mode="ios" (click)="openRemindersPage()">
+        <ion-icon class="wz-time" item-left></ion-icon>Mindful Reminders</button>
+      <ion-item mode="ios" *ngIf='!healthKit.enable && healthKit.platformIsEnabled'>
+        <ion-icon class="wz-apple-health" item-left></ion-icon>
+        <ion-label>Mindful Minutes</ion-label>
+        <ion-toggle mode="ios" custom-toggle [ngModel]="healthKit.toggle" (ngModelChange)="turnOnOffHealthKit()" ></ion-toggle>
+      </ion-item>
+      <ion-item mode="ios" *ngIf='healthKit.enable && healthKit.platformIsEnabled' (click)='disconnectHealthKit()'>
+        <ion-icon class="wz-apple-health" item-left></ion-icon>
+        Mindful Minutes
+        <small>- Connected</small>
+        <ion-icon class="wz-save" item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+
+    <h2>Help & Info</h2>
+    <ion-list mode="ios" no-lines button-list>
+      <button ion-item mode="ios" (click)="openSubsAlreadyPage()" *ngIf='isUserAvailable && user.paid'>
+        <ion-icon class="wz-premium" item-left></ion-icon>Manage Subscription</button>
+      <button ion-item mode="ios" (click)="openUnlock()" *ngIf='isUserAvailable && !user.paid'>
+        <ion-icon class="wz-premium" item-left></ion-icon>Unlock Premium</button>
+      <button ion-item mode="ios" (click)="openSupportPage()">
+        <ion-icon class="wz-support" item-left></ion-icon>Customer Support</button>
+      <button ion-item mode="ios" (click)="openTeamsJoinPage()">
+        <ion-icon class="wz-icon-join-group" item-left></ion-icon>Join Group</button>
+      <!-- <button ion-item mode="ios" (click)="openGiftWelzenPage()">
+        <ion-icon class="wz-gift" item-left></ion-icon>Gift Welzen</button> -->
+      <button ion-item mode="ios" (click)="giveUsStars()">
+        <ion-icon class="wz-star" item-left></ion-icon>Give us 5 Stars</button>
+      <button ion-item mode="ios" (click)="share()">
+        <ion-icon class="wz-share" item-left></ion-icon>Share Welzen</button>
+      <button ion-item mode="ios" (click)="openSciencePage()">
+        <ion-icon class="wz-science" item-left></ion-icon>The Science</button>
+      <button ion-item mode="ios" (click)="openAboutPage()">
+        <ion-icon class="wz-welzen" item-left></ion-icon>About Welzen</button>
+      <!-- <button ion-item mode="ios" (click)="openTeamsPage()">
+        <ion-icon class="wz-work" item-left></ion-icon>Welzen For Work</button>
+      <button ion-item mode="ios">
+        <ion-icon class="wz-icon-therapist" item-left></ion-icon>Welzen For Therapists</button> -->
+      <button ion-item mode="ios" (click)="openTermsPage()">
+        <ion-icon class="wz-policies" item-left></ion-icon>Terms & Conditions</button>
+      <button ion-item mode="ios" (click)="openScreenList()">
+            <ion-icon class="wz-policies" item-left></ion-icon>Screen List</button>
+    </ion-list>
+
+    <div class="logged-user" text-center>
+      <p>Logged in as</p>
+      <p *ngIf="isUserAvailable">{{user.email || user.emailFB}}</p>
+      <p *ngIf='isAppVersionNumberAvailable'>Version {{appVersionNumber}}</p>
+    </div>
+    <button ion-item bg-fade logout-button no-lines mode="ios" (click)='tryLogout()'>Log Out</button>
+
+    <div class="follow-us" text-center>
+      <h3 class="title">Follow Us</h3>
+      <ul clearfix class="social-icons">
+        <li>
+          <a href="https://www.instagram.com/welzenapp/">
+            <ion-icon class="wz-instagram"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/welzenapp" >
+            <ion-icon class="wz-twitter"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/welzen">
+            <ion-icon class="wz-facebook"></ion-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</ion-content>

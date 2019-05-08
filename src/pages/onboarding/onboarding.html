@@ -1,0 +1,203 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Welcome to Welzen!</span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        <ion-icon class="wz-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-500>
+    <ul clearfix class="messages-main-continer">
+      <li class="message-left ">
+        <div class="message-content">
+          <div class="avatar">
+            <img src="assets/imgs/message-avatar.png" alt="">
+          </div>
+          <div class="message">
+            <div class="text">Hi Betty!</div>
+          </div>
+        </div>
+      </li>
+
+      <li class="message-left">
+        <div class="message-content">
+          <div class="message">
+            <div class="text">
+              My name is Lena and I will be your meditator instructor. I wanted to quickly walk you through some amazing features that will help yo get the most of our app. Ready?
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="message-right">
+        <div class="message-content">
+          <div class="message">
+            <div class="text">Tell me more</div>
+          </div>
+        </div>
+      </li>
+      <li class="message-right">
+        <div class="message-content">
+          <div class="message">
+            <img src="assets/imgs/message-img.png" alt="">
+          </div>
+        </div>
+      </li>
+      <li class="message-left ">
+        <div class="message-content">
+          <div class="avatar">
+            <img src="assets/imgs/message-avatar.png" alt="">
+          </div>
+          <div class="message">
+              <ion-badge mode="ios">3</ion-badge>
+            <div class="text">
+              <strong>Daily Happiness.</strong> Everyday we publish a brand new 10 minutes meditation. Join us and be part of a huge commuity of meditators. </div>
+          </div>
+        </div>
+      </li>
+      <li class="message-left ">
+        <div class="message-content">
+          <div class="message">
+              <ion-badge mode="ios">10</ion-badge>
+            <div class="text">Also, let us reach out to you when new content is available or new app features introduced. You can do this by enabling notifications. </div>
+          </div>
+        </div>
+      </li>
+      <li class="message-right ">
+        <div class="message-content">
+          <div class="message">
+            <div class="text">Enable Apple Health and track mindful minutes</div>
+          </div>
+        </div>
+      </li>
+      <li class="message-right ">
+        <div class="message-content">
+          <div class="message">
+            <div class="text">No, thanks, maybe later.</div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="color-palette-container">
+          <h3>Welzen background color choices</h3>
+          <div clearfix class="color-palette">
+            <button ion-button mode="ios" class="active bg-grad-one"></button>
+            <button ion-button mode="ios" class="bg-grad-two"></button>
+            <button ion-button mode="ios" class="bg-grad-three"></button>
+            <button ion-button mode="ios" class="bg-grad-four"></button>
+            <button ion-button mode="ios" class="bg-grad-five"></button>
+            <button ion-button mode="ios" class="bg-grad-six"></button>
+
+          </div>
+        </div>
+      </li>
+      <li class="message-left ">
+        <div class="message-content">
+          <div class="avatar">
+            <img src="assets/imgs/message-avatar.png" alt="">
+          </div>
+          <div class="message">
+            <div class="text">Awesome choice! - See you later!</div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <ion-grid pro-cards>
+          <ion-row clearfix>
+
+            <ion-col col-6  *ngFor="let card of cards" (click)="openDetailPage()">
+              <div class="pro-card" clearfix [ngClass]="{active:isCellSelected}">
+                <div class="bg-img" [ngStyle]="{'background-image': 'url(' + (card.img) + ')'}"></div>
+                <div class="pro-card-inner">
+                  <div class="tags">
+                    <span class="free {{card.free}}">FREE</span>
+                    <span class="new {{card.new}}">NEW</span>
+                    <ion-icon class="{{card.free}} wz-premium"></ion-icon>
+                  </div>
+                  <div class="play-buttonover-card">
+                    <img src="assets/imgs/icon-play.svg" img-shadow alt="">
+                  </div>
+                  <div class="card-title">
+
+                    <div class="title-inner">
+                      <h2>{{card.title}}</h2>
+                      <p>{{card.msg}}</p>
+                      <div class="progress-bar" clearfix="">
+                        <div class="progress-inner" style="width:35%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </li>
+      <li class="message-left ">
+          <div class="message-content">
+            <div class="avatar">
+              <img src="assets/imgs/message-avatar.png" alt="">
+            </div>
+            <div class="message">
+              <div class="text">
+                  I also suggest you try some of this breathing excersices. The 6-2-6 is great for stress and anxiety relive.</div>
+            </div>
+          </div>
+        </li>
+      <li>
+        <ion-grid pro-cards>
+          <ion-row clearfix>
+            <ion-col col-12  >
+              <div class="pro-card adds-card" clearfix>
+                <div class="bg-img" style="background-image: url(assets/imgs/covers/kindness-for-oneself.png)"></div>
+                <div class="pro-card-inner">
+                  <div class="tags">
+                    <span class="free yes">FREE</span>
+                    <span class="new no">NEW</span>
+                    <ion-icon class=" yes wz-lock"></ion-icon>
+                  </div>
+                  <div class="card-title">
+                    <h2>5 days of Welzen</h2>
+                    <p>Introduction to meditation</p>
+                  </div>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </li>
+       <li class="message-left ">
+        <div class="message-content">
+          <div class="avatar">
+            <img src="assets/imgs/message-avatar.png" alt="">
+          </div>
+          <div class="message">
+            <div class="text">Awesome choice! - See you later!</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</ion-content>
+
+<ion-footer mode="ios" no-border onboarding-footer>
+  <ion-toolbar mode="ios">
+    <!-- <button button-forms ion-button block mode="ios">Tell me more</button> -->
+    <ion-grid buttons-grid>
+      <ion-row>
+        <ion-col col-8>
+          <button button-forms ion-button block mode="ios">Enable Apple Health</button>
+        </ion-col>
+        <ion-col col-4>
+          <button button-royal ion-button block mode="ios">No, thanks</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

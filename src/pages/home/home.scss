@@ -1,0 +1,764 @@
+page-home {
+    .header-content {
+        text-align: center;
+        >h1 {
+            font-family: $skytree_two;
+            text-shadow: $title_shadow;
+            font-size: 6rem;
+            margin-top: 2rem;
+        }
+        h2 {
+          margin-top: -1.5rem;
+          font-size: 2.6rem;
+          font-weight: 600;
+          text-shadow: $title_shadow;
+        }
+        p {
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 2.6rem;
+        }
+        button {
+            &[item-free-trial] {
+                max-width: 335px;
+                margin: 0 auto;
+                &.item {
+                    border-radius: $c_radius;
+                    background-image: -webkit-gradient(linear, left bottom, left top, from($gradient_forms_two), to($gradient_forms_one));
+                    background-image: linear-gradient(0deg, $gradient_forms_two 0%, $gradient_forms_one 100%);
+                    -webkit-box-shadow: $item_shadow;
+                    box-shadow: $item_shadow;
+                    .item-inner {
+                        padding: 0;
+                        ion-label {
+                            h1 {
+                                font-size: 3rem;
+                                font-weight: 900;
+                                color: $light;
+                            }
+                            p {
+                                font-size: 1.4rem;
+                                color: $light;
+                                opacity: .7;
+                            }
+                        }
+                    }
+                    ion-icon {
+                        &[item-right] {
+                            font-size: 1.4rem;
+                            color: $light;
+                            margin: 0;
+                            width: 50px;
+                            height: 100%;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            justify-content: center;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            background: $bg_trans1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content-discription {
+        margin: 0 -2rem;
+        background: $overlay_bg no-repeat right bottom;
+        background-size: 100% auto;
+        .mobile-img {
+            margin-top: -6rem;
+            min-height: 510px;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            position: relative;
+            z-index: -1;
+            img {
+                height: 510px;
+                width: auto;
+                max-width: inherit;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+                position: absolute;
+                left: 50%;
+                top: 0;
+            }
+        }
+        .discription {
+            display: inline-block;
+            >img {
+                width: 8rem;
+                height: 8rem;
+            }
+            .discription-text {
+                position: relative;
+                padding: 1rem 0;
+                margin-top: -5rem;
+                h4,
+                h3 {
+                    font-size: 3rem;
+                    font-weight: 600;
+                    position: absolute;
+                    margin: 0;
+                }
+                h4 {
+                    top: 0px;
+                    left: 24%;
+                }
+                h3 {
+                    right: 10%;
+                    bottom: -1.5rem;
+                }
+                h2 {
+                    font-size: 5.5rem;
+                    font-family: $skytree_two;
+                    text-shadow: $title_shadow;
+                    span {
+                        color: $yellow;
+                        position: relative;
+                        display: inline-block;
+                        margin-right: -1rem;
+                    }
+                    &+span {
+                        font-size: 7rem;
+                        font-family: $skytree_swashes;
+                        position: absolute;
+                        bottom: 0;
+                        left: 15%;
+                        text-shadow: $title_shadow;
+                    }
+                }
+            }
+        }
+    }
+    .card-maditation {
+        margin: 0;
+        .discription {
+            margin-top: 3rem;
+            font-size: 2.5rem;
+        }
+        >p {
+            color: color($colors, light, base);
+            margin: 0;
+            font-size: 1.6rem;
+            opacity: .3;
+        }
+        ion-card {
+            max-width: 600px;
+            display: inline-block;
+            border-radius: 10rem;
+            margin: 0;
+            ion-card-content {
+                position: relative;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 0 10rem;
+                min-height: 10rem;
+                .smiley-face,
+                .play-icon {
+                    position: absolute;
+                    img {
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+                .smiley-face {
+                    left: 2.5rem;
+                }
+                .play-icon {
+                    right: 2.5rem;
+                }
+                .card-title {
+                    h2 {
+                        color: color($colors, light, base);
+                        font-size: 2.4rem;
+                        font-weight: 600;
+                    }
+                    p {
+                        font-size: 1.4rem;
+                        color: color($colors, light, base);
+                    }
+                }
+            }
+        }
+    }
+    .gift-of-mindfulness {
+        ion-row {
+            margin: 0 -1rem;
+            ion-col {
+                padding: 1rem;
+            }
+        }
+    }
+    .price-cards {
+        label {
+            display: block;
+            position: relative;
+            margin: 2rem 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            .price-card {
+                border-radius: $c_radius;
+                -webkit-box-shadow: $item_shadow;
+                box-shadow: $item_shadow;
+                position: relative;
+                padding: 2rem;
+                text-align: center;
+                background: $item_bg;
+                -webkit-transition: all .3s ease;
+                transition: all .3s ease;
+                overflow: hidden;
+                ion-icon {
+                    position: absolute;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    border-radius: 50%;
+                    border: 2px solid $light;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    font-size: 1.2rem;
+                    right: 1.5rem;
+                    top: 2rem;
+                    opacity: .7;
+                    -webkit-transition: all .3s ease;
+                    transition: all .3s ease;
+                    color: transparent;
+                    z-index: 2;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: $c_radius;
+                    background: -webkit-gradient(linear, left bottom, left top, from($gradient_forms_two), to($gradient_forms_one));
+                    background: linear-gradient(0deg, $gradient_forms_two 0%, $gradient_forms_one 100%);
+                    opacity: 0;
+                    -webkit-transition: all ease .3s;
+                    transition: all ease .3s;
+                }
+                .content {
+                    position: relative;
+                    z-index: 9;
+                }
+                p {
+                    margin: 0;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                }
+                h3 {
+                    margin: 0;
+                    font-size: 4rem;
+                    font-weight: 900;
+                }
+            }
+            input {
+                &[type="radio"] {
+                    position: absolute;
+                    left: -99999px;
+                    &:checked {
+                        &+.price-card {
+                            // background: -webkit-gradient(linear, left bottom, left top, from($gradient_forms_two), to($gradient_forms_one));
+                            // background: linear-gradient(0deg, $gradient_forms_two 0%, $gradient_forms_one 100%);
+                            ion-icon {
+                                color: $light;
+                                opacity: 1;
+                            }
+                            &:after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mindfulness {
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            &+p {
+                font-size: 1.6rem;
+                opacity: .6;
+            }
+        }
+        .img-tab-mobile {
+            margin: 2rem -7rem;
+        }
+        .features {
+            >p {
+                font-size: 1.4rem;
+                margin-top: 5rem;
+                opacity: .6;
+                padding: 0 0 1rem;
+                border-bottom: 5px solid color($colors, light, base);
+            }
+            ion-row {
+                margin: 0 -1rem;
+                ion-col {
+                    padding: 1rem;
+                    h3 {
+                        font-size: 2.8rem;
+                        font-weight: 600;
+                    }
+                    p {
+                      font-size: 1.8rem;
+                      line-height: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+    .help-you {
+        background: $help_bg no-repeat left center;
+        background-size: cover;
+        padding: 9rem 0;
+        .help-content {
+            h2 {
+                font-size: 3.5rem;
+                font-weight: 600;
+            }
+            h5 {
+                font-size: 2.5rem;
+                margin: 2rem 0 10rem;
+            }
+            >p {
+                font-size: 2.5rem;
+                font-family: $play_f;
+                font-style: italic;
+                line-height: 4rem;
+            }
+            .signature {
+                margin-top: 5rem;
+                h4 {
+                    font-family: $skytree_two;
+                    font-size: 4.8rem;
+                    margin: 0;
+                }
+                p {
+                    margin: 0;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+    .gift-of-mindfulness {
+        ion-row {
+            margin: 0 -1rem;
+            ion-col {
+                padding: 1rem;
+            }
+        }
+        .gift-image {
+            margin: -8rem -9rem -4rem;
+        }
+        .gift-content {
+            h2 {
+                font-size: 3.5rem;
+                font-weight: 600;
+            }
+            p {
+                font-size: 2.5rem;
+            }
+            .price-cards {
+                label {
+                    margin: 0;
+                }
+                .discriptions {
+                    font-size: 1.6rem;
+                    opacity: .6;
+                }
+            }
+        }
+        .card-type {
+            position: relative;
+            height: 43rem;
+                border-radius: $c_radius;
+                background-size: cover;
+                background-position: center bottom;
+            .content {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                padding: 2rem;
+                color: color($colors, dark, base);
+                h6 {
+                    font-size: 2.3rem;
+                    margin: 0;
+                }
+                h2 {
+                    font-size: 4rem;
+                    margin-top: 0;
+                    font-weight: 600;
+                }
+                p {
+                    font-size: 2rem;
+                    color: $testimo;
+                    a {
+                        color: color($colors, dark, base);
+                    }
+                }
+            }
+            img {
+                display: block;
+            }
+        }
+    }
+    .testimonial {
+        ion-slides {
+            ion-slide {
+                .testimonial-card {
+                    background-image: -webkit-gradient(linear, left bottom, left top, from($gradient_trans_one), to($gradient_trans_two));
+                    background-image: linear-gradient(0deg, $gradient_trans_one 0%, $gradient_trans_two 100%);
+                    -webkit-box-shadow: $item_shadow;
+                    box-shadow: $item_shadow;
+                    border-radius: $c_radius;
+                    position: relative;
+                    padding: 2rem;
+                    padding-top: 7.5rem;
+                    margin: .5rem;
+                    margin-top: 10rem;
+                    text-align: left;
+                    .user-img {
+                        width: 11rem;
+                        height: 11rem;
+                        position: absolute;
+                        top: -5.5rem;
+                        left: calc(50% - 5.5rem);
+                        img {
+                            width: 11rem;
+                            height: 11rem;
+                            display: block;
+                            border-radius: 50%;
+                        }
+                    }
+                    h2 {
+                        font-size: 2.8rem;
+                        font-weight: 600;
+                    }
+                    p {
+                        font-family: $play_f;
+                        font-size: 2.2rem;
+                        font-style: italic;
+                    }
+                    h4 {
+                        &.sign {
+                            margin: 3rem 0 1rem;
+                            font-family: $skytree_one;
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media(min-width:768px) {
+    .toolbar {
+        &[toolbar-navigation] {
+            .home-logo {
+                padding: 1.2rem 0;
+                img {
+                    height: 4rem;
+                }
+            }
+            .sidemenu-home {
+                button {
+                    &[button-toggle] {
+                        display: none;
+                    }
+                }
+                .home-menu {
+                    float: left;
+                    li {
+                        height: 40px;
+                        display: inline-block;
+                        vertical-align: top;
+                        a {
+                            color: color($colors, light, base);
+                            font-size: 1.6rem;
+                            padding: 1rem 2rem;
+                            line-height: 40px;
+                        }
+                        &.subscribe {
+                            margin-left: 4rem;
+                        }
+                        button {
+                            min-height: 40px;
+                            padding: 0 3rem;
+                            width: auto;
+                        }
+                    }
+                    &+.home-menu {
+                        margin-left: 5rem;
+                    }
+                }
+            }
+        }
+    }
+    page-home {
+        ion-header {
+            ion-toolbar {
+                max-width: 1225px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .hide-desktop {
+            display: none;
+        }
+        .hide-mobile {
+            display: block;
+        }
+        .desktop-header {
+            background: $mobile_bg no-repeat center 0px;
+            background-size: auto 900px;
+            .header-content {
+                text-align: left;
+                max-width: 600px;
+                >h1 {
+                    font-size: 13rem;
+                    margin-top: 5rem;
+                }
+                h2 {
+                  margin-top: -1.5rem;
+                  font-size: 5rem;
+                  font-weight: 600;
+                  text-shadow: $title_shadow;
+                }
+                p {
+                  font-size: 2.5rem;
+                  font-weight: 400;
+                  line-height: 3.3rem;
+                }
+                button {
+                    &[item-free-trial] {
+                        margin: 5rem 0 0 0;
+                    }
+                }
+            }
+            .content-discription {
+                margin-top: 12rem;
+                background: none;
+                .mobile-img {
+                    display: none;
+                }
+                .discription {
+                    margin-bottom: 5rem;
+                    >img {
+                        width: 12rem;
+                        height: 12rem;
+                    }
+                    .discription-text {
+                        h3,
+                        h4 {
+                            font-size: 5.5rem;
+                            letter-spacing: -2px;
+                        }
+                        h4 {
+                            top: -37px;
+                        }
+                        h3 {
+                            bottom: -3.5rem;
+                        }
+                        h2 {
+                            font-size: 10rem;
+                            +span {
+                                font-size: 18rem;
+                                bottom: -2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .card-maditation {
+            >p {
+                max-width: 960px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1.6rem;
+            }
+            .discription {
+                max-width: 680px;
+                margin-left: auto;
+                margin-right: auto;
+                  p {
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    line-height: 3.3rem;
+                  }
+            }
+            ion-card {
+              width: 450px;
+                ion-card-content {
+                    min-height: 110px;
+                    .smiley-face,
+                    .play-icon {
+                        img {
+                            width: 7rem;
+                            height: 7rem;
+                        }
+                    }
+                    .card-title {
+                        .card-title-inner {
+                            p {
+                                font-size: 1.6rem;
+                            }
+                            h2 {
+                                font-size: 3.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mindfulness {
+            margin-top: 5rem;
+            .image-mindfulness {
+                position: relative;
+                height: 90rem;
+                width: 100%;
+                overflow: hidden;
+                margin-bottom: -2.5rem;
+                img {
+                    width: 100%;
+                    max-width: inherit;
+                    position: absolute;
+                }
+            }
+            .mindfullness-content {
+                padding-top: 6rem;
+                padding-right: 5rem;
+                h2 {
+                    font-size: 4rem;
+                    line-height: 4rem;
+                    letter-spacing: -1px;
+                    font-weight: 500;
+                    &+p {
+                        font-size: 1.6rem;
+                        margin: 1.5 rem 0 3rem 0;
+                    }
+                }
+                .description {
+                    margin-top: 6rem;
+                    >p {
+                        font-size: 2.5rem;
+                        font-weight: 400;
+                        line-height: 3.3rem;
+                    }
+                    .features {
+                        >p {
+                            font-size: 1.6rem;
+                            margin-top: 6rem;
+                        }
+
+                    }
+                }
+            }
+        }
+        .help-you {
+            .help-content {
+                padding-left: 35rem;
+                h2 {
+                  font-size: 4rem;
+                  line-height: 4rem;
+                  letter-spacing: -1px;
+                  font-weight: 500;
+                }
+                h5 {
+                  font-size: 2.5rem;
+                  font-weight: 400;
+                  line-height: 3.3rem;
+                }
+                p {
+                    font-size: 3rem;
+                }
+            }
+        }
+        .gift-of-mindfulness {
+            padding: 10rem 0 0 0;
+            .gift-image {
+                margin-top: -20rem;
+                margin-left: -6rem; // margin-bottom: -9rem;
+                img {
+                    min-width: 900px;
+                }
+            }
+            .gift-content {
+                margin-bottom: 8rem;
+                h2 {
+                  font-size: 4rem;
+                  line-height: 4rem;
+                  letter-spacing: -1px;
+                  font-weight: 500;
+                }
+                p {
+                  font-size: 2.5rem;
+                  font-weight: 400;
+                  line-height: 3.3rem;
+                }
+                .price-cards {
+                    max-width: 700px;
+                    .discriptions {
+                        font-size: 1.6rem;
+                        opacity: .3;
+                        font-weight: normal;
+                        line-height: 2.2rem;
+                    }
+                }
+            }
+            .card-type {
+
+                .content {
+                    padding: 3rem;
+                    h6 {
+                        font-size: 3rem;
+                    }
+                    h2 {
+                      font-size: 4rem;
+                      line-height: 4rem;
+                      letter-spacing: -1px;
+                      font-weight: 500;
+                    }
+                    p {
+                        font-size: 2.3rem;
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,37 @@
+<div class="sectopn-heading icon-right" clearfix>
+  <h2 class="card-heading">Day {{media.order}}</h2>
+  <!-- <ion-icon icon-right [ngClass]="{'wz-lock' : !user.paid}"></ion-icon> -->
+</div>
+<div class="list-item">
+  <div class="discription">
+    <h2>{{media.title}}</h2>
+    <p>{{media.description}}
+    </p>
+  </div>
+</div>
+<div class="list-item">
+  <div class="tags">
+    <!-- <span class="new">NEW</span> -->
+    <span *ngIf="media.isFree" class="free">FREE</span>
+  </div>
+  <ion-item no-lines mode="ios" bg-fade [ngClass]="{'listened yes' : media.wasListened}" ion-item-multiaction >
+    <div class="left-button" (click)="rowClick($event)">
+      <img class="img-icon" src="assets/imgs/icon-play.svg" alt="">
+      <h2>Exercise</h2>
+      <span>{{media.length}} min</span>
+    </div>
+    <div item-right (click)="addFav()" *ngIf="!showLock()">
+      <button ion-button clear color="{{color}}">
+        <ion-icon class="wz-favorite" *ngIf="!media.changingStateFav; else changeFav"></ion-icon>
+        <ng-template #changeFav>
+          <ion-spinner name="dots"></ion-spinner>
+        </ng-template>
+      </button>
+    </div>
+    <div item-right (click)="unlock()" *ngIf="showLock()">
+      <button ion-button clear color="{{color}}">
+        <ion-icon class="wz-premium"></ion-icon>
+      </button>
+    </div>
+  </ion-item>
+</div>

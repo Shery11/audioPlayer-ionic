@@ -1,0 +1,63 @@
+<ion-header mode="ios" no-border no-bg hide-960>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Sign Up</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="default" padding>
+  <div class="desktop-view">
+    <div max-width-500>
+      <div class="logo-company">
+        <img src="assets/imgs/welzen-logo.svg" alt="">
+      </div>
+      <facebook (userLoggedEvent)='signUpByFacebook($event)'></facebook>
+      <p text-center>
+        ↓ or sign up with email ↓
+      </p>
+      <form [formGroup]="signUpform">
+        <ion-list mode="ios" no-lines form-list>
+          <ion-item>
+            <ion-label floating>What should we call you?</ion-label>
+            <ion-input formControlName="fullname" type="text" name="fullname"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>What's your email?</ion-label>
+            <ion-input formControlName="email" type="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Choose a password</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <p text-center link-text no-underline>
+          <a (click)="openTermsPage()">by clicking you agree to the terms & conditions</a>
+        </p>
+        <button ion-button block button-forms min-hgt type="submit" [disabled]="!signUpform.valid" mode="ios" (click)='signUp()'>Sign Up</button>
+      </form>
+
+      <button ion-button block button-email clear mode="ios" color="light" (click)="openSigninPage()">Already a member? Sign In </button>
+    </div>
+    <ion-slides pager="false">
+      <ion-slide style="background-image:url(assets/imgs/bg-img.jpg); ">
+        <h1>journey with us</h1>
+        <h2>mindful Lifestyle</h2>
+        <p>100s of guided and unguided meditations, music, food, books, and all things mindful.</p>
+      </ion-slide>
+    </ion-slides>
+    <ion-grid class="app-play-store">
+      <ion-row>
+        <ion-col col-6>
+          <button ion-button clear block mode="ios">
+            <img src="assets/imgs/app-store.svg" alt="">
+          </button>
+        </ion-col>
+        <ion-col col-6>
+          <button ion-button clear block mode="ios">
+            <img src="assets/imgs/play-store.svg" alt="">
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

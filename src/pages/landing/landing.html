@@ -1,0 +1,21 @@
+<ion-content no-bounce>
+  <div class="logo">
+    <img src="assets/imgs/welzen-logo.svg" alt="">
+  </div>
+  <ion-slides pager loop="false" pager="false" parallax="true">
+    <ion-slide style="background-image:url(assets/imgs/bg-img.jpg); ">
+      <h1>journey with us</h1>
+      <h2>mindful Lifestyle</h2>
+      <p>100s of guided and unguided meditations, music, food, books, and all things mindful.</p>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+<ion-footer mode="ios" no-border no-bg>
+  <ion-toolbar max-width-500>
+    <facebook (userLoggedEvent)='authFacebook($event)'></facebook>
+    <button ion-button block btn-success min-hgt mode="ios" color="signupemail" (click)="openSignupPage()">Sign up with email</button>
+    <button ion-button block button-email clear mode="ios" color="light" (click)="openSigninPage()">Already a member?&nbsp;&nbsp;
+      <strong>Sign In</strong>
+    </button>
+  </ion-toolbar>
+</ion-footer>

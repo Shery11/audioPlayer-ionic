@@ -1,0 +1,23 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Join Team</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <ion-list mode="ios" no-lines form-list>
+      <ion-item>
+        <ion-label floating>Enter Code</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+    <p text-center link-text no-underline>
+      <a (click)="openTermsPage()">by clicking you agree to the terms & conditions</a>
+    </p>
+    <button ion-button block button-forms mode="ios">Join Team</button>
+    <h3>What is this?</h3>
+    <p>Welzen offers a discounts and pre-paid subscriptions for groups. If you are part of a group, please enter your invitation code and join the group. You’ll either get access to a discounted memebership or unlock Welzen premium. Either way, enjoy!</p>
+  </div>
+</ion-content>

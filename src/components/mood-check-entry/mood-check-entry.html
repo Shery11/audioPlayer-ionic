@@ -1,0 +1,18 @@
+<ion-card mode="ios" class="fadeIn">
+    <ion-card-content>
+      <ion-item mode="ios" no-lines>
+        Mood Check - {{meditation.beginTime | date: 'shortTime'}}
+        <!-- <button item-right ion-button clear color="light">
+          <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+        </button> -->
+      </ion-item>
+
+      <div class="bottom-content">
+        <div class="title img-left" *ngIf="isMoodCheckAvailable">
+          <img src="{{moodCheck.icon}}" alt="">
+          <h2>I feel {{moodCheck.mood}}!</h2>
+        </div>
+        <ion-spinner name="dots" *ngIf="!isMoodCheckAvailable"></ion-spinner>
+      </div>
+    </ion-card-content>
+  </ion-card>

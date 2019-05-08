@@ -1,0 +1,38 @@
+[
+    {
+        "id":2,
+        "name": "Camp Out",
+        "free": "true",
+        "url": "assets/audios/loops/camp-out.wav"
+    },
+    {
+        "id":3,
+        "name": "Contryside",
+        "free": "false",
+        "url": "assets/audios/loops/countryside.wav"
+    },
+    {
+        "id":4,
+        "name": "Rain and thunder",
+        "free": "false",
+        "url": "assets/audios/loops/rain-and-thunder.wav"
+    },
+    {
+        "id":5,
+        "name": "Calming Rain",
+        "free": "false",
+        "url": "assets/audios/loops/rain.wav"
+    },
+    {
+        "id":6,
+        "name": "Tranquil ocean",
+        "free": "false",
+        "url": "assets/audios/loops/tranquil-ocean.wav"
+    },
+    {
+        "id":7,
+        "name": "Woodland",
+        "free": "false",
+        "url": "assets/audios/loops/woodland.wav"
+    }
+]

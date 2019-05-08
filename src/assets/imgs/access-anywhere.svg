@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="86px" viewBox="0 0 90 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>access-anywhere</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="26.7980397%" y1="100%" x2="26.7980397%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.7" offset="100%"></stop>
+        </linearGradient>
+        <path d="M70,1009.05455 C70,1008.38964 69.7375,1007.75191 69.26875,1007.27936 C68.7979167,1006.80891 68.1625,1006.54545 67.5,1006.54545 L53.75,1006.54545 C53.0875,1006.54545 52.4520833,1006.80891 51.98125,1007.27936 C51.5125,1007.75191 51.25,1008.38964 51.25,1009.05455 L51.25,1037.49091 C51.25,1038.15582 51.5125,1038.79355 51.98125,1039.26609 C52.4520833,1039.73655 53.0875,1040 53.75,1040 L67.5,1040 C68.1625,1040 68.7979167,1039.73655 69.26875,1039.26609 C69.7375,1038.79355 70,1038.15582 70,1037.49091 L70,1009.05455 Z M47.0833333,1040 L30.4166667,1040 L35.83125,1033.72727 L47.0833333,1033.72727 L47.0833333,1040 Z M60.625,1037.90909 C59.4729167,1037.90909 58.5416667,1036.97236 58.5416667,1035.81818 C58.5416667,1034.664 59.4729167,1033.72727 60.625,1033.72727 C61.775,1033.72727 62.70625,1034.664 62.70625,1035.81818 C62.70625,1036.97236 61.775,1037.90909 60.625,1037.90909 Z M67.9166667,1031.63636 L67.9166667,1012.768 L53.3333333,1012.768 L53.3333333,1031.63636 L67.9166667,1031.63636 Z M63.75,1002.36364 L59.5833333,1002.36364 L59.5833333,998.181818 L24.1666667,998.181818 L24.1666667,1025.36364 L47.0833333,1025.36364 L47.0833333,1029.54545 L20,1029.54545 L20,994 L63.75,994 L63.75,1002.36364 Z M62.7083333,1010.72727 C63.2833333,1010.72727 63.75,1010.25891 63.75,1009.68182 C63.75,1009.10473 63.2833333,1008.63636 62.7083333,1008.63636 L58.5416667,1008.63636 C57.9666667,1008.63636 57.5,1009.10473 57.5,1009.68182 C57.5,1010.25891 57.9666667,1010.72727 58.5416667,1010.72727 L62.7083333,1010.72727 Z" id="path-2"></path>
+        <filter x="-70.0%" y="-54.3%" width="240.0%" height="252.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Subscribe" transform="translate(0.000000, -984.000000)">
+            <g id="access-anywhere">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

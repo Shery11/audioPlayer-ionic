@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="82px" viewBox="0 0 88 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>no-connection</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="26.7980397%" y1="100%" x2="26.7980397%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.7" offset="100%"></stop>
+        </linearGradient>
+        <path d="M33.2875,763.499 L28.3333333,756.398273 L31.7458333,754 L62.1666667,797.601727 L58.7520833,800 L55.8354167,795.818182 L31.4583333,795.818182 C25.13125,795.818182 20,790.668273 20,784.318182 C20,778.668545 24.0645833,773.978636 29.41875,773.010545 C29.6125,769.372364 31.0395833,766.064545 33.2875,763.499 Z M39.24375,759.281636 C41.0229167,758.572818 42.9666667,758.181818 45,758.181818 C53.3458333,758.181818 60.1395833,764.749364 60.58125,773.010545 C65.9354167,773.978636 70,778.668545 70,784.318182 C70,788.753 67.4958333,792.604455 63.8291667,794.521818 L39.24375,759.281636 Z" id="path-2"></path>
+        <filter x="-70.0%" y="-54.3%" width="240.0%" height="252.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Subscribe" transform="translate(-1.000000, -746.000000)">
+            <g id="no-connection">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,269 @@
+page-dashboard {
+    .cards-dashboard-top {
+        ion-card {
+            border-radius: $c_radius;
+            margin: 0;
+            /* margin-bottom: 2rem; */
+            -webkit-box-shadow: $item_shadow_lg;
+            box-shadow: $item_shadow_lg;
+            height: 270px;
+            position: relative;
+            >img {
+                /* height: 250px; */
+                border-radius: $c_radius;
+                &+ion-card-content {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            ion-card-content {
+                .large-title {
+                    font-family: $skytree_one;
+                    text-shadow: $title_shadow;
+                    text-align: center;
+                    font-size: 6rem;
+                    margin-top: -1rem;
+                }
+                .current {
+                    p {
+                        text-shadow: $text_shadow;
+                        color: $light;
+                        margin: 0;
+                    }
+                    h2 {
+                        text-shadow: $text_shadow;
+                        color: $light;
+                        font-weight: 600;
+                        margin: 0;
+                        font-size: 2.2rem;
+                    }
+                }
+                .card-title {
+                    position: absolute;
+                    padding-left: 60px;
+                    min-height: $s50;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    margin-top: 1rem;
+                    left: 20px;
+                    bottom: 20px;
+                    z-index: 1;
+                    right: 20px;
+                    p {
+                        text-shadow: $text_shadow;
+                        color: $light;
+                        margin: 0;
+                    }
+                    h2 {
+                        text-shadow: $text_shadow;
+                        color: $light;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+                    img {
+                        height: $s50;
+                        width: $s50;
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+// Discover
+.discover-section {
+    margin-top: 1rem;
+    .title {
+        h2 {
+            font-family: $skytree_one;
+            text-shadow: $title_shadow;
+            font-size: 7.5rem;
+            position: relative;
+            margin: 0;
+            span {
+                font-family: $skytree_swashes;
+                text-shadow: $title_shadow;
+                position: absolute;
+                left: 47%;
+                top: 51%
+            }
+        }
+        h3 {
+            font-weight: 600;
+            font-size: 2.5rem;
+            text-shadow: $text_shadow;
+            margin: 0;
+        }
+        p {
+            margin: .5rem 0;
+            font-size: 1.8rem;
+        }
+    }
+    img {
+        margin: 0rem auto 0 auto;
+        position: relative;
+        &[hidewhen="desktop"] {
+            max-width: 500px;
+            width: 100%;
+        }
+    }
+    button {
+        &[btn-success] {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+}
+@media(min-width:768px) {
+    page-dashboard {
+        .cards-dashboard-top {
+            white-space: nowrap;
+            overflow-x: scroll;
+            margin-left: -$s20;
+            margin-right: -$s20;
+            margin-bottom: $s20;
+            padding: $s20 $s20;
+            ion-card {
+                width: 390px;
+                border-radius: $c_radius !important;
+                overflow: hidden !important;
+                &+ion-card {
+                    margin-left: 26px;
+                }
+                ion-card-content {
+                    padding: 2rem;
+                }
+            }
+            .card-in-ddesktop {
+                display: inline-block;
+                vertical-align: top;
+                ion-card {
+                    .smiley-face {
+                        text-align: center;
+                        text-shadow: $text_shadow;
+                        font-size: 1.6rem;
+                        img {
+                            height: $s40;
+                            width: $s40;
+                            display: inline-block
+                        }
+                    }
+                }
+            }
+            .mobile-scroll-cards {
+                display: inline-block;
+                margin-left: 26px;
+                ion-card {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+@media(max-width:768px) {
+    page-dashboard {
+        .cards-dashboard-top {
+            .card-in-ddesktop {
+                padding: 6px 0px;
+                display: block;
+                margin-bottom: $s100;
+                ion-card {
+                    height: auto;
+                    margin: 0;
+                    &.card {
+                        width: 100%
+                    }
+                    max-width: inherit;
+                    border-radius: 100px;
+                    .smiley-face {
+                        text-align: center;
+                        text-shadow: $text_shadow;
+                        font-size: 1.6rem;
+                        img {
+                            height: $s60;
+                            width: $s60;
+                            display: inline-block
+                        }
+                    }
+                    ion-card-content {
+                        min-height: 100px;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        padding: 24px;
+                        .smiley-face {
+                            position: absolute;
+                            img {
+                                width: $s50;
+                                height: $s50;
+                            }
+                        }
+                        .card-title {
+                            width: 100%;
+                            margin: 0;
+                            padding-left: $s80;
+                            padding-right: $s80;
+                            text-align: center;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            justify-content: center;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            .card-title-inner {
+                                display: inline-block;
+                            }
+                            img {
+                                left: auto;
+                                right: 24px;
+                            }
+                            h2 {
+                                font-size: 2.2rem;
+                                text-shadow: $text_shadow;
+                            }
+                            p {
+                                font-size: 1.4rem;
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+            .mobile-scroll-cards {
+                .scroll-inner {
+                    white-space: nowrap;
+                    overflow-x: scroll;
+                    display: block;
+                    min-height: 300px;
+                    margin-bottom: $s20;
+                    margin-left: -$s20;
+                    margin-right: -$s20;
+                    padding: 0 $s20;
+                }
+                ion-card {
+                    display: inline-block;
+                    max-width: 315px;
+                    vertical-align: top;
+                    /* margin-top: 1rem; */
+                    border-radius: $c_radius !important;
+                    overflow: hidden !important;
+                    &+ion-card {
+                        margin-left: $s20;
+                    }
+                }
+            }
+        }
+    }
+}

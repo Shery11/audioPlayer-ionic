@@ -1,0 +1,22 @@
+page-detail-program {
+    .sectopn-heading {
+      margin-bottom: 15px;
+      border-bottom: 3px solid rgba(255, 255, 255, .2);
+    }
+    .content-left {
+        ion-list {
+            margin: 0;
+        }
+    }
+    .content-right {
+      margin: 0 -3px;
+      padding: 0 3px !important;
+        ion-list {
+          margin: 0;
+          overflow: visible !important;
+            &+ion-list {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

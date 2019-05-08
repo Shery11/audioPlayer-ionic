@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="84px" height="93px" viewBox="0 0 84 93" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>invest-in-yourself</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="26.7980397%" y1="100%" x2="26.7980397%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.7" offset="100%"></stop>
+        </linearGradient>
+        <path d="M20,918.375 C29.2613636,915.806042 41.6136364,919.532292 45,932.125 C49.5113636,918.514792 63.075,915.966458 70,918.375 C64.3931818,921.8675 62.0522727,939 45,939 C27.9477273,939 25.7113636,921.878958 20,918.375 Z M38.6431818,890.689375 C38.6613636,886.995208 41.6409091,884 45.3090909,884 C48.9795455,884 51.9590909,886.995208 51.9772727,890.689375 C55.1590909,888.858333 59.2204545,889.962917 61.0568182,893.166667 C62.8909091,896.370417 61.8090909,900.470208 58.6431818,902.333333 C61.8090909,904.196458 62.8909091,908.29625 61.0568182,911.5 C59.2204545,914.70375 55.1590909,915.808333 51.9772727,913.977292 C51.9590909,917.671458 48.9795455,920.666667 45.3090909,920.666667 C41.6409091,920.666667 38.6613636,917.671458 38.6431818,913.977292 C35.4613636,915.808333 31.3977273,914.70375 29.5636364,911.5 C27.7295455,908.29625 28.8113636,904.196458 31.9772727,902.333333 C28.8113636,900.470208 27.7295455,896.370417 29.5636364,893.166667 C31.3977273,889.962917 35.4613636,888.858333 38.6431818,890.689375 Z M45,896.604167 C48.1363636,896.604167 50.6818182,899.170833 50.6818182,902.333333 C50.6818182,905.495833 48.1363636,908.0625 45,908.0625 C41.8636364,908.0625 39.3181818,905.495833 39.3181818,902.333333 C39.3181818,899.170833 41.8636364,896.604167 45,896.604167 Z" id="path-2"></path>
+        <filter x="-70.0%" y="-45.5%" width="240.0%" height="227.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Subscribe" transform="translate(-3.000000, -875.000000)">
+            <g id="invest-in-yourself">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

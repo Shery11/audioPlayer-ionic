@@ -1,0 +1,106 @@
+page-breathe {
+    .breathe-continer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .breathe-card {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background-image: linear-gradient(-1deg, $gradient_danger_one 0%, $gradient_danger_two 100%);
+            font-size: 2.2rem;
+            -webkit-box-shadow: $item_shadow;
+            box-shadow: $item_shadow;
+            -webkit-animation-duration: 02s;
+            animation-duration: 02s;
+            -webkit-animation-name: changewidth;
+            animation-name: changewidth;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+    }
+    ion-list {
+        &.list {
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            right: 20px;
+            margin: 0;
+            ion-item {
+                &.item {
+                    padding: 0;
+                    .item-inner{
+                        padding: 0;
+                    }
+                    background: none;
+                    ion-thumbnail {
+                        min-width: $s100;
+                        min-height: $s100;
+                        border-radius: $c_radius;
+                        box-shadow: $item_shadow;
+                        overflow: hidden;
+                        img {
+                            width: $s100;
+                            height: $s100;
+                        }
+                    }
+                    h2{
+                        color: $light;
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+                    p{
+                        color: $light;
+                        font-size: 1.3rem;
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes changewidth {
+    from {
+        width: 180px;
+        height: 180px;
+    }
+    to {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@keyframes changewidth {
+    from {
+        width: 180px;
+        height: 180px;
+    }
+    to {
+        width: 300px;
+        height: 300px;
+    }
+}

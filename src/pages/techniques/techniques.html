@@ -1,0 +1,40 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">Visualizations</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="dismiss()">
+        <ion-icon class="wz-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <ion-grid pro-cards>
+      <ion-row clearfix>
+        <ion-col col-12>
+          <!-- <video width="335" height="335" autoplay>
+            <source src="assets/videos/test/test.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> -->
+          <div class="pro-card" clearfix>
+            <!-- <video width="100%" controls autoplay>
+              <source src="assets/videos/test/test.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> -->
+            <div class="bg-img" style="background-image: url(assets/imgs/covers/female-guidance.png)"></div>
+            <div class="pro-card-inner">
+              <div class="play-buttonover-card">
+                <img src="assets/imgs/icon-play.svg" img-shadow alt="">
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h2>What are visualizations and how I can use them in meditations?</h2>
+    <p>…got together, had a child and named him Welzen. We started this company because we believe we can become a better society. We believe we can help this cause by taking care of our mind.</p>
+    <p>Mindfulness teaches a lot of things but our main takeaway is that it empowers us to practice acceptance in 2 specific ways: first, by accepting ourselves as wonderful and dark as we are, and secondly, by fully experiencing each moment with all that it has to offer.</p>
+  </div>
+</ion-content>

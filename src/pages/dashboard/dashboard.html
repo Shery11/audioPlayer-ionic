@@ -1,0 +1,327 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-toolbar mode="ios">
+    <ion-buttons start>
+      <button ion-button icon-only color="light" (click)="openProfilePage()">
+        <ion-icon class="wz-message"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title mode="ios">
+      <span class="logo">
+        <img src="assets/imgs/welzen-logo.svg" alt="">
+      </span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="openSettingsPage()">
+        <ion-icon class="wz-settting"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <ion-refresher (ionRefresh)="refreshDashboard($event)" pullMin="150" pullMax="200">
+    <ion-refresher-content
+      pullingIcon="arrow-down"
+      pullingText="Pull to refresh"
+      refreshingSpinner="dots"
+      refreshingText="Refreshing..."
+      >
+    </ion-refresher-content>
+  </ion-refresher>
+  <div max-width-1225>
+    <div class="dashboard-intro fadeInDown" text-center>
+      <h1>how are you?</h1>
+      <div class="mood-check" clearfix>
+         <label *ngFor="let mood of moodChecks" for="{{mood.id}}" (click)="openMoodPostPage(mood)">
+            <input type="radio" id="{{mood.id}}" name="modeCheck">
+            <div class="mood-type">
+               <img src="{{mood.icon}}" alt="">
+               <p>{{mood.mood}}</p>
+            </div>
+         </label>
+      </div>
+      <!-- <button mode="ios" ion-button text-uppercase btn-custom button-forms (click)="openMoodPostPage()">Check-in Now</button> -->
+    </div>
+
+    <div class="cards-dashboard-top">
+      <div class="card-in-ddesktop" (click)="playDailyMeditation()">
+        <div hideWhen="android,ios" class="sectopn-heading">
+          <h2 class="card-heading">Your #dailyhappiness meditation</h2>
+        </div>
+        <ion-card mode="md" card-pink class="fadeIn">
+          <ion-card-content>
+            <div class="smiley-face">
+              <img src="assets/imgs/icon-happy-face-daily.svg" img-shadow alt="">
+            </div>
+            <div hideWhen="android,ios" class="large-title">
+              #dailyhappiness
+            </div>
+            <div class="card-title">
+              <img src="assets/imgs/icon-play.svg" *ngIf="isUserAvailable && user.paid" img-shadow alt="">
+              <img src="assets/imgs/ico-premium.svg" *ngIf="isUserAvailable && !user.paid" img-shadow alt="">
+              <div class="card-title-inner">
+                <ion-spinner name="dots" *ngIf="!isDailyMeditationAvailable"></ion-spinner>
+                <h2 *ngIf="isDailyMeditationAvailable">{{dailyMedia.title}}</h2>
+                <p> #dailyhappiness - 10 min</p>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="mobile-scroll-cards">
+        <div class="sectopn-heading button-right" clearfix>
+          <h2 class="card-heading">Recomended for you</h2>
+        </div>
+        <div class="scroll-inner">
+          <ng-container *ngFor='let meditation of recommends'>
+            <recommend-meditation-card [meditation]="meditation" (showDetailEvent)="openDetailPage($event)" ></recommend-meditation-card>
+          </ng-container>
+
+
+          <!-- <ion-card mode="md" class="card-shades-bottom fadeIn" (click)="goToPlayer(2)">
+            <img src="assets/imgs/covers/5-days.jpg" alt="Five days of Welzen">
+            <ion-card-content>
+              <div class="current">
+                <p>Recomended program</p>
+                <h2>Five days of Welzen</h2>
+                <div class="progress-bar" clearfix>
+                  <div class="progress-inner" style="width:35%"></div>
+                </div>
+              </div>
+              <div class="card-title">
+                <img src="assets/imgs/icon-play.svg" img-shadow alt="play">
+                <div class="card-title-inner">
+                  <p>Play next - Day 1</p>
+                  <h2>Listening - 10 min</h2>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card> -->
+
+          <!-- <ion-card mode="md" class="card-shades-bottom fadeIn" (click)="goToPlayer(2)">
+            <img src="assets/imgs/covers/love.jpg" alt="love">
+            <ion-card-content>
+              <div class="current">
+                <p>Recomended Serie</p>
+                <h2>Love</h2>
+              </div>
+              <div class="card-title">
+                <img src="assets/imgs/icon-play.svg" img-shadow alt="play">
+                <div class="card-title-inner">
+                  <p>Play next - Day 1</p>
+                  <h2>Listening - 10 min</h2>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card> -->
+        </div>
+      </div>
+      <!-- <div class="mobile-scroll-cards">
+        <div class="sectopn-heading button-right" clearfix>
+          <h2 class="card-heading">Continue where you left off...</h2>
+          <button hideWhen="desktop" ion-button color="light" (click)="showInfoAlert()" btn-rt fade-30 clear>
+            <ion-icon class="wz-info"></ion-icon>
+          </button>
+        </div>
+        <div class="scroll-inner">
+          <ion-card mode="md" class="card-shades-bottom" (click)="goToPlayer(2)">
+            <img src="assets/imgs/covers/stress.jpg" alt="stress">
+            <ion-card-content>
+              <div class="current">
+                <p>Current Program</p>
+                <h2>Stress Management</h2>
+                <div class="progress-bar" clearfix>
+                  <div class="progress-inner" style="width:35%"></div>
+                </div>
+              </div>
+              <div class="card-title">
+                <img src="assets/imgs/icon-play.svg" img-shadow alt="play">
+                <div class="card-title-inner">
+                  <p>Play next - Day 2</p>
+                  <h2>Listening - 10 min</h2>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+          <ion-card mode="md" class="card-shades-bottom" (click)="goToPlayer(2)">
+            <img src="assets/imgs/covers/love.jpg" alt="love">
+            <ion-card-content>
+              <div class="current">
+                <p>Current Serie</p>
+                <h2>Love</h2>
+              </div>
+              <div class="card-title">
+                <img src="assets/imgs/icon-play.svg" img-shadow alt="play">
+                <div class="card-title-inner">
+                  <p>Play next</p>
+                  <h2>Love Mantra - 10 min</h2>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+
+        </div>
+      </div> -->
+    </div>
+
+    <!-- <ion-list no-lines list-custom hideWhen="desktop">
+      <ion-item mode="md">
+        <ion-label>
+          <h2>Set a Reminder</h2>
+        </ion-label>
+        <ion-toggle mode="md" custom-toggle checked="false"></ion-toggle>
+      </ion-item>
+    </ion-list> -->
+
+    <div class="sectopn-heading button-right" clearfix>
+      <h2 class="card-heading">Explore</h2>
+    </div>
+    <div class="segment-container" clearfix>
+      <ion-segment sub-segment color="light" mode="ios" [(ngModel)]="meditationTags">
+        <ion-segment-button value="">
+          ALL
+        </ion-segment-button>
+        <ion-segment-button value="fav">
+          <ion-icon class="wz-favorite"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="breathe">
+          <ion-icon class="wz-breathe"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="music">
+          <ion-icon class="wz-sound"></ion-icon>
+        </ion-segment-button>
+        <!-- <ion-segment-button value="stories">
+          <ion-icon class="wz-icon-stories"></ion-icon>
+        </ion-segment-button> -->
+        <!-- <ion-segment-button value="nature">
+          <ion-icon class="wz-icon-nature-sounds"></ion-icon>
+        </ion-segment-button> -->
+        <ion-segment-button value="Sleep" text-uppercase>
+          Sleep
+        </ion-segment-button>
+        <ion-segment-button value="Anxiety" text-uppercase>
+          ANXIETY
+        </ion-segment-button>
+        <ion-segment-button value="Stress" text-uppercase>
+          Stress
+        </ion-segment-button>
+        <ion-segment-button value="Depression" text-uppercase>
+          Depression
+        </ion-segment-button>
+        <ion-segment-button value="Life Events" text-uppercase>
+          Life Events
+        </ion-segment-button>
+        <ion-segment-button value="Focus" text-uppercase>
+          Focus
+        </ion-segment-button>
+        <ion-segment-button value="Career" text-uppercase>
+          Career
+        </ion-segment-button>
+        <ion-segment-button value="Studies" text-uppercase>
+          Studies
+        </ion-segment-button>
+        <ion-segment-button value="Growth" text-uppercase>
+          Growth
+        </ion-segment-button>
+        <ion-segment-button value="Less Guidance" text-uppercase>
+          Less Guidance
+        </ion-segment-button>
+        <ion-segment-button value="Relationships" text-uppercase>
+          Relationships
+        </ion-segment-button>
+        <ion-segment-button value="Espanol" text-uppercase>
+          Español
+        </ion-segment-button>
+        <ion-segment-button value="Performance" text-uppercase>
+          Performance
+        </ion-segment-button>
+        <ion-segment-button value="offline">
+          <ion-icon class="wz-no-internet"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    <div [ngSwitch]="meditationTags">
+      <div *ngSwitchDefault ngSelected="selected">
+
+        <ion-grid pro-cards class="fadeIn">
+          <ion-row clearfix>
+            <!-- <ion-col col-12 col-md-3 col-lg-2>
+              <div class="pro-card adds-card" clearfix>
+                <div class="bg-img" style="background-image: url(assets/imgs/covers/5-days.png)"></div>
+                <div class="pro-card-inner no-shades">
+                  <div class="tags">
+                    <span class="free yes">FREE</span>
+                    <span class="new no">NEW</span>
+                    <ion-icon class="yes wz-lock"></ion-icon>
+                  </div>
+                  <div class="card-title">
+                    <h2>5 days of Welzen</h2>
+                    <p>Intro to meditation</p>
+                    <div class="progress-bar" clearfix="">
+                      <div class="progress-inner" style="width:35%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ion-col> -->
+            <ion-col col-6 col-md-3 col-lg-2 *ngFor="let meditation of meditations | tagsMeditation:meditationTags" >
+              <meditation-card *ngIf="isUserAvailable" [user]="user" [meditation]="meditation" (showDetailEvent)="openDetailPage($event)"></meditation-card>
+            </ion-col>
+            <!-- <ion-col col-12 col-md-3 col-lg-2>
+              <div class="pro-card adds-card" clearfix>
+                <div class="bg-img" style="background-image: url(assets/imgs/covers/kindness-for-oneself.png)"></div>
+                <div class="pro-card-inner">
+                  <div class="tags">
+                    <span class="free yes">FREE</span>
+                    <span class="new no">NEW</span>
+                    <ion-icon class=" yes wz-lock"></ion-icon>
+                  </div>
+                  <div class="card-title">
+                    <h2>5 days of Welzen</h2>
+                    <p>Introduction to meditation</p>
+                  </div>
+                </div>
+              </div>
+            </ion-col> -->
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      <div *ngSwitchCase="'fav'">
+        <ion-grid pro-cards class="fadeIn">
+          <ion-row clearfix *ngIf="favs && favs.length > 0 ;else noFavs" >
+            <ion-col col-6 col-md-3 col-lg-2 *ngFor="let media of favs">
+              <favourite-card [media]="media"></favourite-card>
+            </ion-col>
+          </ion-row>
+          <ng-template #noFavs>
+             <div class="fadeInUp" text-center>You haven't <ion-icon class="wz-favorite" color="danger" item-start></ion-icon>'ed any meditations yet. Tap the <ion-icon class="wz-favorite" color="light"></ion-icon> on any meditation session and it will appear here.</div>
+          </ng-template>
+        </ion-grid>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="discover-section" text-center  *ngIf="isUserAvailable && !user.paid">
+      <div class="title">
+        <h2>Discover
+          <span>l</span>
+        </h2>
+        <h3>The Power of Meditation</h3>
+        <p>Unlock happiness with our suite of guided mindfulness meditations</p>
+      </div>
+      <img src="assets/imgs/benefits.png" hideWhen="desktop" alt="">
+      <img src="assets/imgs/some-bennefits-2.png" hideWhen="android,ios" alt="">
+    </div>
+  </div>
+</ion-content>
+<ion-footer mode="ios" no-border *ngIf="isUserAvailable && !user.paid">
+  <ion-toolbar color="dark" unlock-btn>
+    <button ion-item no-lines mode="ios" (click)="openUnlock()">
+      <h2>
+        <ion-icon class="wz-premium premium"></ion-icon> 7 Days Free Trial</h2>
+    </button>
+  </ion-toolbar>
+</ion-footer>

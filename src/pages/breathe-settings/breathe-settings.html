@@ -1,0 +1,122 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios" text-left>
+      <span>Breathe Settings</span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="dismiss()">
+        <ion-icon class="wz-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <div class="setting-section" clearfix>
+      <h2>Interval Change Signal</h2>
+      <div class="select-options" clearfix>
+        <label for="none">
+          <input type="radio" id="none" name="interval">
+          <div class="content">
+            NONE
+          </div>
+        </label>
+        <label for="voice">
+          <input type="radio" id="voice" name="interval">
+          <div class="content">
+            VOICE
+          </div>
+        </label>
+        <label for="vibrate">
+          <input type="radio" id="vibrate" name="interval">
+          <div class="content">
+            VIBRATE
+          </div>
+        </label>
+        <label for="bell">
+          <input checked type="radio" id="bell" name="interval">
+          <div class="content">
+            BELL
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="setting-section" clearfix>
+      <h2>Breathing Type</h2>
+      <div class="select-options" clearfix>
+        <label for="custom">
+          <input checked type="radio" id="custom" name="breathingType">
+          <div class="content">
+            CUSTOM
+          </div>
+        </label>
+        <label for="breck">
+          <input type="radio" id="breck" name="breathingType">
+          <div class="content">
+            4 - 7- 8
+          </div>
+        </label>
+        <label for="ujjayi">
+          <input type="radio" id="ujjayi" name="breathingType">
+          <div class="content">
+            UJJAYI
+          </div>
+        </label>
+        <label for="square">
+          <input type="radio" id="square" name="breathingType">
+          <div class="content">
+            SQUARE
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <ion-list mode="ios" no-lines range>
+
+      <ion-item no-bg>
+        <ion-label stacked>Inhale
+          <span>30 Sec.</span>
+        </ion-label>
+        <ion-range mode="md" color="warning" [(ngModel)]="range">
+        </ion-range>
+      </ion-item>
+      <ion-item no-bg>
+        <ion-label stacked>Hold
+          <span>30 Sec.</span>
+        </ion-label>
+        <ion-range mode="md" color="warning" [(ngModel)]="range">
+        </ion-range>
+      </ion-item>
+      <ion-item no-bg>
+        <ion-label stacked>Exhale
+          <span>30 Sec.</span>
+        </ion-label>
+        <ion-range mode="md" color="warning" [(ngModel)]="range">
+        </ion-range>
+      </ion-item>
+      <ion-item no-bg>
+        <ion-label stacked>End hold
+          <span>60 Sec.</span>
+        </ion-label>
+        <ion-range mode="md" color="warning" [(ngModel)]="range">
+        </ion-range>
+      </ion-item>
+      <ion-item no-bg>
+        <ion-label stacked>1 Cycle
+          <span>3 min. 14 sec.</span>
+        </ion-label>
+        <ion-range mode="md" color="warning" [(ngModel)]="range">
+        </ion-range>
+      </ion-item>
+    </ion-list>
+    <ion-list no-lines mode="ios" list-custom>
+      <ion-item mode="md">
+        <ion-label>
+          <h2>Hapatic Feedback</h2>
+        </ion-label>
+        <ion-toggle mode="md" custom-toggle checked="false"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

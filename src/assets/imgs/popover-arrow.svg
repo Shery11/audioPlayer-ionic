@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="7px" viewBox="0 0 20 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>popover-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,5.04876666 L1.89022777,5.04876666 C2.60636159,5.04876666 3.29887256,4.79259018 3.84260189,4.32653647 L8.04762588,0.722230193 C9.17109507,-0.240743398 10.8289049,-0.240743398 11.9523741,0.722230193 L16.1573981,4.32653647 C16.7011274,4.79259018 17.3936384,5.04876666 18.1097722,5.04876666 L20,5.04876666 L20,7 L0,7 L0,5.04876666 Z" id="popover-arrow" fill="#D6407E"></path>
+    </g>
+</svg>

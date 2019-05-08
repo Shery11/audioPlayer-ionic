@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>card-ico-premium</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="26.7980397%" y1="100%" x2="26.7980397%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="card-ico-premium" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M25,50 C38.8071187,50 50,38.8071187 50,25 C50,11.1928813 38.8071187,0 25,0 C11.1928813,0 0,11.1928813 0,25 C0,38.8071187 11.1928813,50 25,50 Z M17.5,29 L15,19 L20.92,23 L25,15 L29.08,23 L35,19 L32.5,29 L17.5,29 Z M17.5,31 L17.5,35 L32.5,35 L32.5,31 L17.5,31 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

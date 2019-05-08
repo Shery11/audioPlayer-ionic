@@ -1,0 +1,62 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Teams</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-1225>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <div class="page-heading" text-center>Wellness Dashboard</div>
+          <p>Real inshight into the use and engagement of your mindfullness program. Be a hearo, bring Welzen to your team. We offer 2 different way to do this.</p>
+        </ion-col>
+        <ion-col col-12 col-md-6>
+          <div>
+            <h3>Yearly Pre-paid Subscription</h3>
+            <p>Pre-pay today and get a 50% discount for a limited time. Reg. $59.99/year</p>
+          </div>
+          <div class="custom-item-buttons" clearfix commoun-item-bg>
+            <div class="content-left-buttons">
+              <div class="input-content">
+                <input type="text" value="6">
+                <p>Users</p>
+              </div>
+              <div class="buttons">
+                <button ion-button clear color="light">
+                  <ion-icon ios="ios-arrow-up" md="ios-arrow-up"></ion-icon>
+                </button>
+                <button ion-button clear color="light">
+                  <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+                </button>
+              </div>
+            </div>
+            <div class="content-right-buttons" text-center>
+              <h2>$149.97</h2>
+              <p>Per Year</p>
+              <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col hideWhen="desktop" col-12>
+          <div class="or-devider">or</div>
+        </ion-col>
+        <ion-col col-12 col-md-6>
+          <div>
+            <h3>Offer your team a 50% discount</h3>
+            <p>We provide enrollment and tracking tools. Users manage their own billing.</p>
+          </div>
+          <button commoun-item-bg ion-item item-free-trial no-lines mode="ios">
+            <h1>Invite Unlimited Users</h1>
+            <p>$49.99 per month.</p>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
+  </div>
+</ion-content>

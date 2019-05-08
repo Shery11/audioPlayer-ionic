@@ -1,0 +1,168 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span class="logo">
+        <img src="assets/imgs/welzen-logo.svg" alt="">
+      </span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="dismiss()">
+        <ion-icon class="wz-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-1225>
+    <div class="page-title fadeInDown">
+      <h1>Discover peace of mind</h1>
+      <p>with our suite of guided meditations</p>
+    </div>
+    <ion-grid>
+      <ion-row class="desktop-view">
+        <ion-col col-12 class="loader" *ngIf="!isDataAvailable">
+          <p>Just a sec, loading Products</p>
+          <img img-rt src="assets/imgs/typing.svg" alt="">
+        </ion-col>
+        <ion-col col-12 col-xl-4>
+          <div class="appy-code">
+            <ion-item no-lines mode="ios" no-bg>
+              <ion-label floating>Enter Code</ion-label>
+              <ion-input type="text" [(ngModel)]="code" ></ion-input>
+            </ion-item>
+            <button ion-button block button-forms mode="ios" (click)="redeemCode()" *ngIf="!coupon">Redeem Code</button>
+            <button ion-button button-trans block mode="ios" (click)="removeDiscount()" *ngIf="coupon">Remove Code</button>
+          </div>
+          <!-- <div class="price-discription">
+            <p>Recurring charge. Cancel anytime. The subscription will automaticly renew unless auto-renew is turned off at least 24 hours before the end of the current period. By continuing you agree to our <a href="">Privacy Policy</a> and <a href="">Terms & Conditions</a></p>
+          </div> -->
+        </ion-col>
+        <ion-col col-12 *ngIf="isDataAvailable && isSpecialCode" >
+          <h2>Your Coupon</h2>
+          <p>{{coupon.metadata.description}}</p>
+          <button ion-button block button-forms mode="ios" (click)="subscribe(getSpecialProduct())">
+            Continue
+          </button>
+        </ion-col>
+        <ion-col col-12 col-xl-4 *ngIf="isDataAvailable && !isSpecialCode" class="fadeInUp">
+          <button ion-item item-free-trial no-lines mode="md" (click)="subscribe(yearly)">
+            <p show-in-large>Subscribe Yearly</p>
+            <ion-icon class="wz-right-arrow" item-right></ion-icon>
+            <h1>7 Days Free Trial</h1>
+            <p *ngIf="yearly.priceWithDiscount">${{yearly.priceWithDiscount}} per year after FREE 7-day trial</p>
+            <p *ngIf="!yearly.priceWithDiscount">${{yearly.price}} per year after FREE 7-day trial</p>
+          </button>
+        </ion-col>
+        <ion-col col-6 col-xl-2 *ngIf="isDataAvailable  && !isSpecialCode" class="fadeInUp">
+          <button ion-button mode="ios" class="price-card" (click)="subscribe(monthly)">
+            <div class="content">
+              <h4>Monthly</h4>
+              <h2 *ngIf="monthly.priceWithDiscount">
+                  ${{monthly.priceWithDiscount}}
+                  <small>/mo</small>
+              </h2>
+              <h2 *ngIf="!monthly.priceWithDiscount">
+                ${{monthly.price}}
+                <small>/mo</small>
+              </h2>
+              <p>Subscribe</p>
+            </div>
+          </button>
+        </ion-col>
+        <ion-col col-6 col-xl-2 *ngIf="isDataAvailable  && !isSpecialCode" class="fadeInUp">
+          <button ion-button mode="ios" class="price-card" (click)="buy(forever)">
+            <div class="content">
+              <h4>Forever</h4>
+              <h2 *ngIf="forever.priceWithDiscount" >${{forever.priceWithDiscount}}</h2>
+              <h2 *ngIf="!forever.priceWithDiscount" >${{forever.price}}</h2>
+              <p>Purchase</p>
+            </div>
+          </button>
+        </ion-col>
+        <ion-col col-12 text-center>
+          <div class="price-discription">
+            <p>Recurring charge. Cancel anytime. The subscription will automaticly renew unless auto-renew is turned off at least 24 hours before the end of the current period. By continuing you agree to our <a href="">Privacy Policy</a> and <a href="">Terms & Conditions</a></p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="bennefits" show-in-large>
+      <img src="assets/imgs/some-bennefits-2.png" alt="">
+    </div>
+    <div class="sectopn-heading img-right" clearfix>
+      <h2 class="card-heading">Benefits of Premium</h2>
+      <img img-rt src="assets/imgs/premium.svg" alt="">
+    </div>
+    <ion-grid class="premium-list">
+      <ion-row>
+        <ion-col col-12 col-lg-6 col-xl-4>
+          <div class="benifit-items">
+            <img src="assets/imgs/daily-happiness.svg" alt="">
+            <h2>Unlock Daily Happiness</h2>
+            <p>Get access to a brand new 10 minute mindfulness meditation with an inspiring life lesson every day</p>
+          </div>
+        </ion-col>
+        <ion-col col-12 col-lg-6 col-xl-4>
+          <div class="benifit-items">
+            <img src="assets/imgs/all-meditations.svg" alt="">
+            <h2>Unlock all meditations</h2>
+            <p>Get access to the topics that matter most important to you, plus 100s of mindfulness meditation and tools</p>
+          </div>
+        </ion-col>
+        <ion-col col-12 col-lg-6 col-xl-4>
+          <div class="benifit-items">
+            <img src="assets/imgs/no-connection.svg" alt="">
+            <h2>No connection, no problem.</h2>
+            <p>Download your favorite meditations and enjoy them while commuting, flying, or anywhere else</p>
+          </div>
+        </ion-col>
+        <ion-col col-12 col-lg-6 col-xl-4>
+          <div class="benifit-items">
+            <img src="assets/imgs/invest-in-yourself.svg" alt="">
+            <h2>Invest in Yourself</h2>
+            <p>Build a healthy habit to improve your happiness, well-being, and tranquility</p>
+          </div>
+        </ion-col>
+        <ion-col col-12 col-lg-6 col-xl-4>
+          <div class="benifit-items">
+            <img src="assets/imgs/access-anywhere.svg" alt="">
+            <h2>Access Anywhere</h2>
+            <p>Convenient and accessible, Welzen is wherever you are, on your phone (Android & iOS), tablet or Apple TV</p>
+          </div>
+        </ion-col>
+
+
+      </ion-row>
+    </ion-grid>
+    <!--
+    <ul class="premium-list" clearfix>
+      <li>
+        <img src="assets/imgs/daily-happiness.svg" alt="">
+        <h2>Unlock Daily Happiness</h2>
+        <p>Get access to a brand new 10 minute mindfulness meditation with an inspiring life lesson every day</p>
+      </li>
+
+      <li>
+        <img src="assets/imgs/all-meditations.svg" alt="">
+        <h2>Unlock all meditations</h2>
+        <p>Get access to the topics that matter most important to you, plus 100s of mindfulness meditation and tools</p>
+      </li>
+      <li>
+        <img src="assets/imgs/no-connection.svg" alt="">
+        <h2>No connection, no problem.</h2>
+        <p>Download your favorite meditations and enjoy them while commuting, flying, or anywhere else</p>
+      </li>
+      <li>
+        <img src="assets/imgs/invest-in-yourself.svg" alt="">
+        <h2>Invest in Yourself</h2>
+        <p>Build a healthy habit to improve your happiness, well-being, and tranquility</p>
+      </li>
+      <li>
+        <img src="assets/imgs/access-anywhere.svg" alt="">
+        <h2>Access Anywhere</h2>
+        <p>Convenient and accessible, Welzen is wherever you are, on your phone (Android & iOS), tablet or Apple TV</p>
+      </li>
+
+    </ul> -->
+  </div>
+</ion-content>

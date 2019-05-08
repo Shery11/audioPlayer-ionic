@@ -1,0 +1,346 @@
+<ion-header mode="ios" no-border no-bg>
+    <ion-toolbar toolbar-navigation>
+      <ion-buttons start mode="ios">
+        <div class="home-logo">
+          <img src="assets/imgs/welzen-logo.svg" alt="">
+        </div>
+      </ion-buttons>
+
+      <ion-buttons end mode="ios" class="sidemenu-home">
+        <button ion-button button-toggle icon-only mode="md" clear color="light" (click)="toggleClass()">
+          <ion-icon class="wz-menu"></ion-icon>
+        </button>
+        <div [class.sm-menu-active]="smMenuActive" class="menu-content" clearfix>
+          <ul class="home-menu menu-right">
+            <li>
+              <a (click)="openDashboardPage()">Meditate</a>
+            </li>
+            <li>
+              <a (click)="openBreathePage()">Breathe</a>
+            </li>
+            <li>
+              <a (click)="openTeamsPage()">For Work</a>
+            </li>
+            <li>
+              <a href="">For Therapists</a>
+            </li>
+            <li>
+              <a href="">Blog</a>
+            </li>
+            <li>
+              <a (click)="openUnlockWebPage()">Subscribe</a>
+            </li>
+            <li>
+              <button ion-button button-trans color="light" large mode="ios" (click)="openSigninPage()">Login</button>
+            </li>
+          </ul>
+        </div>
+      </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="theme.css">
+
+  <div class="desktop-header">
+    <div max-width-1225 padding>
+      <div class="header-content">
+        <h1>mindfulness</h1>
+        <h2>The new healthy lifestyle</h2>
+        <p>Sign up today and access an amazing library of therapeutic mindfulness tools to relieve stress and anxiety, sleep better, and improve overall wellbeing.</p>
+        <button ion-item item-free-trial no-lines mode="md" (click)="openUnlockWebPage()">
+          <ion-icon class="wz-right-arrow" item-right></ion-icon>
+          <h1>7 Days Free Trial</h1>
+          <p>$59.99 per year after FREE 7-day trial</p>
+        </button>
+      </div>
+      <div class="content-discription" text-center>
+        <div class="mobile-img">
+          <img src="assets/imgs/web/phone.png" alt="">
+        </div>
+        <div class="discription">
+          <img src="assets/imgs/icon-happy-face-daily.svg" img-shadow alt="">
+          <div class="discription-text">
+            <h4>the</h4>
+            <h2>
+              <span>#</span>dailyhappiness </h2>
+            <h3>meditation</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div clearfix text-center class="card-maditation">
+    <div max-width-1225 padding>
+      <ion-card mode="md" card-pink>
+        <ion-card-content>
+          <div class="smiley-face">
+            <img src="assets/imgs/icon-happy-face-daily.svg" img-shadow alt="">
+          </div>
+          <div class="card-title">
+            <div class="card-title-inner">
+              <p>10 Min. Meditation</p>
+              <h2>Gratitude</h2>
+            </div>
+          </div>
+          <div class="play-icon">
+            <img src="assets/imgs/icon-play.svg" img-shadow alt="">
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <p>Sample #dailyhappiness meditation</p>
+      <div class="discription">
+        <p>A brand new 10-minute daily mindfulness meditation with a life lesson, designed to guide you on a path of happiness,
+          self-discovery, acceptance, and compassion.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mindfulness">
+    <div max-width-1225 padding>
+      <ion-row>
+        <ion-col col-12 col-xl-8>
+          <div class="mindfullness-content">
+            <h2>The Best Mindfulness app<br />on planet neptune.</h2>
+            <p class="tags">Also, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune — and Planet Nine.</p>
+            <div class="hide-desktop img-tab-mobile">
+              <img src="assets/imgs/web/tab-mobile.png" alt="">
+
+            </div>
+            <div class="description">
+              <p>Mindfulness Meditation Programs, Series and Singles. Learn, practice and relax. Progressive mindfulness meditation
+                practice to improve specific areas and intentions.
+              </p>
+              <p>
+                We offer programs on Anxiety, Stress, Sleep, Depression, Pain, Relationships, Focus, and Creativity and more.</p>
+
+              <div class="features">
+                <p>Features nobody else has in any adjacent galaxies</p>
+                <ion-row>
+                  <ion-col col-12 col-lg-6>
+                    <h3>Mood Check & Journaling</h3>
+                    <p>Subject-specific meditations you can practice anytime anywhere. Enjoy series on Parenting, Mindful Travel,
+                      Relaxing sounds, Happiness, Self, Kids, and much more.</p>
+                  </ion-col>
+                  <ion-col col-12 col-lg-6>
+                    <h3>Emotional Feed</h3>
+                    <p>Choose a time between 5, 10, 15, or 20 minutes and meditate away! Enjoy guided meditations on-the-go
+                      for Mindful Walking, Waking Up, Relaxing the body.</p>
+                  </ion-col>
+                </ion-row>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col col-12 col-xl-4 class="hide-mobile">
+          <div class="image-mindfulness">
+            <img src="assets/imgs/web/phone1.png" alt="">
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+  <div class="help-you">
+    <div max-width-1225 padding>
+      <div class="help-content">
+      <h2>Scientifically proven to help you</h2>
+      <h5>Mindfulness is about how we show up for ourselves. Life can only happen in the present moment. </h5>
+      <p>The power of our presence is available with each breath ~ this power is the birthplace of our joy, peace, and meaning
+        on the journey of life.</p>
+      <div class="signature">
+        <h4>Lena Franklin</h4>
+        <p>Head of Content @ Welzen
+          <br> Mindfulness-Based Psychotherapist.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="gift-of-mindfulness">
+    <div max-width-1225 padding>
+      <ion-row>
+        <ion-col col-12 col-xl-4 push-xl-8>
+          <div class="gift-image">
+            <img src="assets/imgs/web/gift-card.png" alt="">
+          </div>
+        </ion-col>
+        <ion-col col-12 col-xl-8 pull-xl-4>
+          <div class="gift-content">
+            <h2>Give the gift of mindfulness</h2>
+            <p>Let your loved one’s journey into a happier and healthier life. You can purchase Yearly and Forever Memberships
+              to gift, by following three simple steps.</p>
+            <div class="price-cards">
+              <ion-row>
+                <ion-col col-12 col-lg-6>
+                  <label for="yearly" tet-center>
+                    <input type="radio" checked id="yearly" name="subscription">
+                    <div class="price-card">
+                      <ion-icon class="wz-save"></ion-icon>
+                      <div class="content">
+                        <p>Yearly Subscription - 50% Off</p>
+                        <h3>$29.99</h3>
+                      </div>
+                    </div>
+                  </label>
+                </ion-col>
+                <ion-col col-12 col-lg-6>
+                  <label for="forever" tet-center>
+                    <input type="radio" id="forever" name="subscription">
+                    <div class="price-card">
+                      <ion-icon class="wz-save"></ion-icon>
+                      <div class="content">
+                        <p>Forever - 50% Off</p>
+                        <h3>$59.99</h3>
+                      </div>
+                    </div>
+                  </label>
+                </ion-col>
+              </ion-row>
+              <p class="discriptions">No, you can’t gift this to yourself. Or... can you? Maybe? Have you tried? Gift subscriptions are billed in one payment at the time of purchase and are not automatically renewed.</p>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 col-lg-6>
+          <div class="card-type" style="background-image: url(assets/imgs/web/therapists-bg.png)">
+            <div class="content">
+              <h6>Welzen for</h6>
+              <h2>Therapists</h2>
+              <p>Let your loved one’s journey into a happier and healthier life. You can purchase Yearly and Forever.</p>
+              <p>
+                <a href="">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col col-12 col-lg-6>
+          <div class="card-type" style="background-image: url(assets/imgs/web/corporations-bg.png)">
+            <div class="content">
+              <h6>Welzen for</h6>
+              <h2>Corporations</h2>
+              <p>Let your loved one’s journey into a happier and healthier life. You can purchase Yearly and Forever.</p>
+              <p>
+                <a href="">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <div max-width-1225 padding>
+      <ion-slides [slidesPerView]="slidesPerView">
+        <ion-slide>
+          <div class="testimonial-card">
+            <div class="user-img">
+              <img src="assets/imgs/web/user.png" alt="">
+            </div>
+            <h2>Helps me eliminate stresst</h2>
+            <p>The every day hustle and bustle make us forget to just stop and clear our minds to wipe stress away, this app
+              is great to use on so many different levels – when it comes to stress, needing to be more focus plus more.
+              It’s great for when you’re at work and/or on the go. I even use in my car.</p>
+            <h4 class="sign">
+              Melch640
+            </h4>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="testimonial-card">
+            <div class="user-img">
+              <img src="assets/imgs/web/user.png" alt="">
+            </div>
+            <h2>Helps me eliminate stresst</h2>
+            <p>The every day hustle and bustle make us forget to just stop and clear our minds to wipe stress away, this app
+              is great to use on so many different levels </p>
+            <h4 class="sign">
+              Melch640
+            </h4>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="testimonial-card">
+            <div class="user-img">
+              <img src="assets/imgs/web/user.png" alt="">
+            </div>
+            <h2>Helps me eliminate stresst</h2>
+            <p>The every day hustle and bustle make us forget to just stop and clear our minds to wipe stress away, this app
+              is great to use on so many different levels – when it comes to stress, needing to be more focus plus more.
+              It’s great for when you’re at work and/or on the go. I even use in my car.</p>
+            <h4 class="sign">
+              Melch640
+            </h4>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="testimonial-card">
+            <div class="user-img">
+              <img src="assets/imgs/web/user.png" alt="">
+            </div>
+            <h2>Helps me eliminate stresst</h2>
+            <p>The every day hustle and bustle make us forget to just stop and clear our minds to wipe stress away, this app
+              is great to use on so many different levels </p>
+            <h4 class="sign">
+              Melch640
+            </h4>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div max-width-1225 padding>
+      <ion-row>
+        <ion-col col-12 col-lg-6>
+          <p class="copyright">Copyright © 2018 Welzen. All rights reserved</p>
+          <ul>
+            <li>
+              <a (click)="openContactPage()">Contact</a>
+            </li>
+            <li>
+              <a (click)="openTermsPage()">Policies</a>
+            </li>
+            <li>
+              <a (click)="openAboutPage()">About</a>
+            </li>
+            <li>
+              <a href="">Medita Kit</a>
+            </li>
+          </ul>
+          <div class="store-buttons">
+            <button clear ion-button icon-only mode="ios">
+              <img src="assets/imgs/app-store.svg" alt="">
+            </button>
+            <button clear ion-button icon-only mode="ios">
+              <img src="assets/imgs/play-store.svg" alt="">
+            </button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer mode="ios" no-border>
+  <ion-toolbar color="dark" unlock-btn>
+    <button ion-item no-lines mode="ios" (click)="openUnlockMobileModal()">
+      <h2>
+        <ion-icon class="wz-premium premium"></ion-icon>7 Days Free Trial</h2>
+      <!-- <p>$59.99 per year after FREE 7-day trial</p> -->
+    </button>
+  </ion-toolbar>
+</ion-footer>
+<!-- <ion-footer mode="ios" no-border footer-store-button>
+  <ion-toolbar color="primary" text-center mode="ios">
+    <button clear ion-button icon-only mode="ios">
+      <img src="assets/imgs/app-store.svg" alt="">
+    </button>
+    <button clear ion-button icon-only mode="ios">
+      <img src="assets/imgs/play-store.svg" alt="">
+    </button>
+  </ion-toolbar>
+</ion-footer> -->

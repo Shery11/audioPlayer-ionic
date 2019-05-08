@@ -1,0 +1,33 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Favorites</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <p class="mt-0">All your favorite meditations in one place. Simply tap on them and start meditating.</p>
+    <ion-list no-lines mode="ios" list-custom>
+      <ion-item mode="md" *ngFor="let item of items">
+        <img src="assets/imgs/icon-play.svg" item-left class="play-icon" alt="">
+        <h2>{{item.title}}</h2>
+        <p>{{item.type}}
+          <span>{{item.time}}</span>
+        </p>
+        <button ion-button clear icon-only small item-right mode="ios" color="light" (click)="showDeleteConfirm()">
+          <ion-icon class="wz-trash"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+<!-- <ion-footer mode="ios" no-border>
+  <ion-toolbar color="dark" unlock-btn>
+    <button ion-item no-lines mode="ios" (click)="openUnlock()">
+      <h2>
+      <ion-icon class="wz-premium premium"></ion-icon>7 Days Free Trial</h2>
+      <p>$59.99 per year after FREE 7-day trial</p>
+    </button>
+  </ion-toolbar>
+</ion-footer> -->

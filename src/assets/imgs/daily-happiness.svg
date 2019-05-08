@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="90px" viewBox="0 0 88 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>daily-happiness</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="26.7980397%" y1="100%" x2="26.7980397%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.7" offset="100%"></stop>
+        </linearGradient>
+        <path d="M45,544 C31.1928813,544 20,532.807119 20,519 C20,505.192881 31.1928813,494 45,494 C58.8071187,494 70,505.192881 70,519 C70,532.807119 58.8071187,544 45,544 Z M54.1783333,522 C51.6583333,524.060852 48.8883333,525.330131 45.0016667,525.330131 C41.1116667,525.330131 38.3416667,524.060852 35.8216667,522 L35,522.850209 C36.8783333,525.816457 40.3333333,529 45.0016667,529 C49.6683333,529 53.1216667,525.816457 55,522.850209 L54.1783333,522 Z M50.5,512 C49.12,512 48,513.118333 48,514.5 C48,515.881667 49.12,517 50.5,517 C51.88,517 53,515.881667 53,514.5 C53,513.118333 51.88,512 50.5,512 Z M39.5,512 C38.12,512 37,513.118333 37,514.5 C37,515.881667 38.12,517 39.5,517 C40.88,517 42,515.881667 42,514.5 C42,513.118333 40.88,512 39.5,512 Z" id="path-2"></path>
+        <filter x="-70.0%" y="-50.0%" width="240.0%" height="240.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Subscribe" transform="translate(-1.000000, -484.000000)" fill-rule="nonzero">
+            <g id="daily-happiness">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

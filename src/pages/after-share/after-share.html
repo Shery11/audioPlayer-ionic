@@ -1,0 +1,48 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">Share</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="showFeedbackConfirm()">
+        <ion-icon class="wz-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <div class="page-title" text-center>
+      <h2>#dailyhappiness</h2>
+    </div>
+    <ion-grid pro-cards>
+      <ion-row clearfix>
+        <ion-col col-12>
+          <div class="dailyhappiness-card" clearfix>
+            <div class="bg-img" style="background-image: url(assets/imgs/covers/kindness-for-oneself.png)"></div>
+            <div class="card-overlay"></div>
+            <div class="dailyhappiness-card-inner">
+              <div class="dailyhappiness-title">
+                <h4>#dailyhappiness</h4>
+              </div>
+              <div class="app-logo">
+                <img src="assets/imgs/welzen-logo.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <p>‪Today’s #dailyhappiness is about #forgiveness which centers you in the now and in yourself. Through meditation, you can let go of past regret and cease feeding your negative thought loops of negative energy.</p>
+    <div class="share" text-center>
+      <h5>Share</h5>
+      <ul clearfix>
+        <li>
+          <ion-icon class="wz-facebook"></ion-icon>
+        </li>
+        <li>
+          <ion-icon class="wz-twitter"></ion-icon>
+        </li>
+      </ul>
+    </div>
+    <button ion-button clear block color="light" text-underline mode="ios" (click)="openDashboardPage()">Skip & Continue</button>
+  </div>
+</ion-content>

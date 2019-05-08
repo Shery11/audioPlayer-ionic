@@ -1,0 +1,38 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-buttons start>
+      <button ion-button icon-only color="light" (click)="close()">
+        <ion-icon class="wz-close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title mode="ios">
+      <span>Mood Check</span>
+    </ion-title>
+    <ion-buttons end>
+      <button class="save" ion-button icon-start color="light" (click)="saveMood()">
+        <ion-icon class="wz-save"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="settings-palette" padding>
+  <div class="mood-check" clearfix>
+    <label *ngFor="let mood of moodChecks" for="{{mood.id}}"  (click)="changeMood(mood)">
+      <input type="radio" checked='{{isCurrentMood(mood)}}' name="modeCheck">
+      <div class="mood-type">
+         <img src="{{mood.icon}}" alt="">
+         <p>{{mood.mood}}</p>
+      </div>
+     </label>
+  </div>
+  <ion-list no-lines mode="ios">
+    <ion-item no-bg>
+      <!-- <ion-label stacked>Journal Entry <span>(optional)</span></ion-label> -->
+      <ion-textarea  max='300' placeholder='Write down your thoughts... (optional)' [(ngModel)]="journalSelected"></ion-textarea>
+    </ion-item>
+    <ion-item no-bg text-right text-wrap suggation>
+     <p>Choose your words wisely, you have {{300 - journalSelected.length}} left.</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

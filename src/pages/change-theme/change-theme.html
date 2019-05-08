@@ -1,0 +1,37 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Change Theme</span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="dismiss()">
+        <ion-icon class="wz-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="settings-palette" padding>
+  <div max-width-960>
+    <!-- <p>Select a background theme for the Welzen app</p> -->
+    <div class="color-themes">
+      <ion-grid  *ngIf="isThemesAvailable">
+        <ion-row>
+          <ion-col *ngFor="let thm of themes" col-md-4 col-sm-6 col-6>
+            <label>
+              <input  checked='{{isCurrentTheme(thm)}}' type="radio" name="colorTheme" (click)="changeTheme(thm)">
+              <div class="theme-view {{thm.thumbCss || thm.css}}" [ngClass]="{'imagebg-theme': (thm.isImage() || thm.isVideo())}" >
+                <div class="check">
+                  <i class="wz-save"></i>
+                </div>
+                <ion-icon class="type" ios="md-images" md="md-images" *ngIf='thm.isImage()'></ion-icon>
+                <ion-icon class="type" ios="ios-videocam" md="ios-videocam" *ngIf='thm.isVideo()'></ion-icon>
+
+                <h5>{{thm.title}}</h5>
+              </div>
+            </label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

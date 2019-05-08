@@ -1,0 +1,23 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">Select a sound</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="dismiss()">
+        <ion-icon class="wz-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="settings-palette" padding>
+  <div max-width-960   *ngIf="isUserAvailable && isBackgroundAvailable">
+    <ion-list mode="ios" no-lines list-options  radio-group [ngModel]="currentBackground.id" >
+      <ion-item mode="ios" *ngFor="let sound of backgrounds" >
+        <div class="free-option" item-left  *ngIf="!user.paid && sound.free">FREE</div>
+        <ion-icon item-left class="wz-premium" *ngIf="!user.paid && !sound.free"></ion-icon>
+        <ion-label>{{sound.name}}</ion-label>
+        <ion-radio item-right mode="ios" color="light" (ionSelect)="selectSound(sound)"  value="{{sound.id}}"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

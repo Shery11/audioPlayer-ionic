@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="38px" viewBox="0 0 45 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>mood-content</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mood-Check" transform="translate(-232.000000, -170.000000)">
+            <g id="mood-content" transform="translate(232.000000, 170.000000)">
+                <path d="M22.5,0 C0.522025396,0 0,24.4175865 0,29.2514717 C0,34.0853569 10.0736793,38 22.5,38 C34.9298479,38 45,34.0818617 45,29.2514717 C45,24.4175865 44.4815018,0 22.5,0 Z" id="Shape" fill="#FCC21B" fill-rule="nonzero"></path>
+                <g id="Group" transform="translate(12.000000, 13.000000)" fill="#2F2F2F" fill-rule="nonzero">
+                    <path d="M3.03320823,6.9999004 C1.37648652,7.01432554 0.01863889,5.46001635 0.000189873201,3.53065343 C-0.0182591436,1.59407794 1.31007006,0.0145247427 2.96679177,9.95993619e-05 C4.61982367,-0.014325544 5.98136111,1.53998365 5.99981013,3.47655914 C6.01825914,5.40952835 4.68992994,6.98547526 3.03320823,6.9999004 Z" id="Shape"></path>
+                    <path d="M19.0110701,6.99999376 C20.6642024,6.99638552 22.0036824,5.42680069 21.9999924,3.49639176 C21.9963024,1.55876635 20.6494423,-0.00360200373 18.99631,6.23726145e-06 C17.3394876,0.00361447825 15.9963176,1.57319931 16.0000076,3.51082472 C16.0073876,5.44123365 17.3542477,7.003602 19.0110701,6.99999376 Z" id="Shape"></path>
+                </g>
+                <path d="M13,25 C17.937073,30.3333333 28.062927,30.3333333 33,25" id="Shape" stroke="#2F2F2F" stroke-width="2.09345798" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

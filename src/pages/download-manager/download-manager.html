@@ -1,0 +1,31 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Download Manager</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <p class="mt-0">All your favorite meditations in one place. Simply tap on them and start meditating.</p>
+    <ion-list no-lines mode="ios" list-custom class="mb-20">
+      <ion-item mode="md">
+        <ion-label> <h2>Offline Access</h2></ion-label>
+        <ion-toggle mode="md" custom-toggle checked="false"></ion-toggle>
+      </ion-item>
+    </ion-list>
+    <ion-list no-lines mode="ios" list-custom>
+      <ion-item mode="md" *ngFor="let item of items">
+        <img src="assets/imgs/icon-play.svg" item-left class="img-icon" alt="">
+        <h2>{{item.title}} <small>{{item.time}}</small></h2>
+        <p>{{item.type}} -
+          <span>{{item.size}} MB</span>
+        </p>
+        <button ion-button clear icon-only small item-right mode="ios" color="light" (click)="showDeleteConfirm()">
+          <ion-icon class="wz-trash"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+    <button ion-button block button-delete mode="ios" class="mb-20">Delete All Meditations</button>
+  </div>
+</ion-content>

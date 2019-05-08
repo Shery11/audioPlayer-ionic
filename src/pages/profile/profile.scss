@@ -1,0 +1,212 @@
+page-profile {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-shadow: $item_shadow;
+        border-radius: $c_radius;
+        background-image: $item_bg;
+        margin-bottom: 3rem;
+        width: 100%;
+        li {
+            float: left;
+            text-align: center;
+            padding: 1.5rem 0;
+            h2 {
+                margin: .5rem 0;
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+            p {
+                margin: 0;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+            }
+            &+li {
+                border-left: 1px solid rgba(0, 0, 0, 0.10);
+            }
+        }
+        &.statistic-stutas {
+            li {
+                width: 33.3333333%;
+            }
+        }
+        &.total-mood-checks {
+            li {
+                width: 20%;
+            }
+        }
+    }
+    ion-card {
+        &.card {
+            ion-card-content {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+            margin: 0 0 2rem;
+            width: 100%;
+            border-radius: $c_radius;
+            background: $item_bg;
+            box-shadow: $item_shadow;
+            /* min-height: 215px;
+            max-height: 335px; */
+            ion-item {
+                &.item {
+                    padding-left: 0;
+                    background: none;
+                    margin-top: -1rem;
+                    .item-inner {
+                        padding: 0;
+                    }
+                    ion-label {
+                        margin: 0;
+                        color: $light;
+                        opacity: .7;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            .bottom-content {
+                .title-daily {
+                    position: relative;
+                    margin: 0 auto;
+                    h2 {
+                        font-family: $skytree_one;
+                        font-size: 5rem;
+                        margin: 2rem 0 0 0;
+                        text-shadow: $title_shadow;
+                    }
+                    p {
+                      margin-bottom: 1.5rem;
+                    }
+                    img {
+                        width: 70px;
+                        margin: 0 auto -40px auto;
+                    }
+                }
+                .title-meditation {
+                    position: relative;
+                    margin: 0 auto;
+                    h2 {
+                        font-family: $skytree_one;
+                        font-size: 4rem;
+                        margin: 4rem 0 0 0;
+                        text-shadow: $title_shadow;
+                    }
+                    p {
+                      margin-bottom: 0.5rem;
+                    }
+                    img {
+                        width: 70px;
+                        margin: 0 auto;
+                    }
+                }
+                .title {
+                    position: relative;
+                    h3 {
+                        font-family: $skytree_one;
+                        font-size: 3.5rem;
+                        font-weight: normal;
+                    }
+                    h2 {
+                        font-size: 2.4rem;
+                        font-weight: 600;
+                    }
+                    &.img-left {
+                        min-height: 5rem;
+                        padding-left: 5rem;
+                        display: flex;
+                        align-items: center;
+                        img {
+                            top: 0.5rem;
+                            height: 3.5rem;
+                            position: absolute;
+                            left: 0rem;
+                            width: auto;
+                        }
+                        h2 {
+                            font-size: 2.4rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+                p {
+                    color: $light;
+                    margin: 0;
+                    font-size: 1.5rem;
+                    span {
+                        opacity: .5;
+                        margin-bottom: .5rem;
+                        display: block;
+                    }
+                }
+                .content {
+                    position: relative;
+                    &.button-right {
+                        padding-right: 70px;
+                        min-height: 50px;
+                        [button-right] {
+                            min-width: $s50;
+                            min-height: $s50;
+                            margin: 0;
+                            padding: 0;
+                            border-radius: 50%;
+                            box-shadow: $item_shadow;
+                            position: absolute;
+                            top: 50%;
+                            margin-top: -$s50/2;
+                            right: 0;
+                            img {
+                                width: $s50;
+                                height: $s50;
+                            }
+                        }
+                    }
+                }
+            }
+            &[imgbg] {
+                position: relative;
+                .card-overlay {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    z-index: 3;
+                }
+                ion-card-content {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    z-index: 9;
+                    .bottom-content {
+                        position: absolute;
+                        bottom: 2rem;
+                        left: 2rem;
+                        right: 2rem;
+                        .title {
+                            h2 {
+                                font-family: $skytree_one;
+                                font-size: 3.5rem;
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                }
+            }
+            &[card-pink] {
+                /* Rectangle 6: */
+                background: linear-gradient(-1deg, #A12F5B 0%, #E2387E 100%);
+            }
+        }
+    }
+    .page-heading {
+        font-family: $skytree_one;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        text-shadow: $title_shadow;
+    }
+
+}

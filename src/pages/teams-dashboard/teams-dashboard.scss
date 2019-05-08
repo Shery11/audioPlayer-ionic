@@ -1,0 +1,133 @@
+page-teams-dashboard {
+    .sectopn-heading {
+        border-width: 1px;
+    }
+    ion-grid {
+        &.grid {
+            padding: 0;
+            ion-row {
+                margin: 0 -1rem;
+                ion-col {
+                    padding: 1rem;
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        box-shadow: $item_shadow;
+                        border-radius: $c_radius;
+                        background-image: $item_bg;
+                        margin-bottom: $s20;
+                        width: 100%;
+                        li {
+                            float: left;
+                            text-align: center;
+                            padding: 1.5rem 0;
+                            min-height: 145px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            h2 {
+                                margin: .5rem 0;
+                                font-size: 1.8rem;
+                                font-weight: 600;
+                            }
+                            p {
+                                margin: 0;
+                                font-size: 1.4rem;
+                                line-height: 1.6rem;
+                            }
+                            &+li {
+                                border-left: 1px solid rgba(0, 0, 0, 0.10);
+                            }
+                        }
+                        &.statistic-stutas {
+                            li {
+                                width: 33.3333333%;
+                            }
+                        }
+                        &.total-mood-checks {
+                            li {
+                                width: 20%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ion-list {
+        &.list {
+            margin: 0;
+        }
+        ion-item {
+            &.item {
+                background: none;
+                padding-left: 0;
+                min-height: 78px;
+                .item-inner{
+                    padding-right: 0 !important;
+                }
+                ion-thumbnail {
+                    &[item-start] {
+                        margin: 1.2rem 16px 1.2rem 0;
+                        width: 60px;
+                        height: 60px;
+                        position: relative;
+                        img {
+                            width: 60px;
+                            height: 60px;
+                            box-shadow: $item_shadow;
+                            border-radius: $c_radius;
+                        }
+                    }
+                    &:before {
+                        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1%, $gradient_overlay_one), to($gradient_overlay_two));
+                        background-image: linear-gradient(-180deg, $gradient_overlay_one 1%, $gradient_overlay_two 100%);
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        border-radius: $c_radius;
+                        opacity: .9;
+                    }
+                }
+                &+.item {
+                    border-top: $item_border !important;
+                }
+                h2 {
+                    color: $light;
+                    font-size: 1.8rem;
+                }
+                p {
+                    color: $light;
+                    font-size: 1.6rem;
+                    opacity: .7;
+                }
+                ion-icon {
+                    &[item-right] {
+                        color: $light;
+                    }
+                }
+                button {
+                    &[item-right] {
+                        &.button {
+                            border-radius: $c_radius;
+                            background-image: $item_bg;
+                            -webkit-box-shadow: $item_shadow;
+                            box-shadow: $item_shadow;
+                            background-color: transparent;
+                            min-height: 45px;
+                            margin: 0;
+                            .button-inner{
+                                font-size: 1rem;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

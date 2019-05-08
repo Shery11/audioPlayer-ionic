@@ -1,0 +1,195 @@
+page-unlock-mobile {
+    .page-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+        h1 {
+            font-family: $skytree_one;
+            text-shadow: $title_shadow;
+            font-size: 6.5rem;
+        }
+        p {
+            font-size: 2.2rem;
+            margin-top: -.5rem;
+        }
+    }
+    ion-grid {
+        &.grid {
+            padding: 0;
+            ion-row {
+                &.row {
+                    margin: 0 -10px;
+                    ion-col {
+                        &.col {
+                            padding: 10px;
+                            button {
+                                &[ion-item] {
+                                    &.item {
+                                        background: linear-gradient(-1deg, $gradient_danger_one 0%, $gradient_danger_two 100%);
+                                        border-radius: $c_radius;
+                                        -webkit-box-shadow: $item_shadow;
+                                        box-shadow: $item_shadow;
+                                        padding-left: $s20;
+                                        min-height: 9rem;
+                                        ion-label {
+                                            h1 {
+                                                font-size: 3rem;
+                                                font-weight: 900;
+                                                color: $light;
+                                            }
+                                            p {
+                                                font-size: 1.4rem;
+                                                color: $light;
+                                                opacity: .7;
+                                            }
+                                        }
+                                        &.item-ios {
+                                            &:not([detail-none]) {
+                                                .item-inner {
+                                                    padding-right: 4.5rem;
+                                                    &:before {
+                                                        width: 4.5rem;
+                                                        height: 100%;
+                                                        content: '';
+                                                        right: 0;
+                                                        top: 0;
+                                                        position: absolute;
+                                                        background: -webkit-gradient(linear, left top, left bottom, from($gradient_royal_one), to($gradient_royal_two));
+                                                        background: linear-gradient(-180deg, $gradient_royal_one 0%, $gradient_royal_two 100%);
+                                                        z-index: -1;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .price-card {
+                                border-radius: $c_radius;
+                                -webkit-box-shadow: $item_shadow;
+                                box-shadow: $item_shadow;
+                                background: -webkit-gradient(linear, left top, left bottom, from($gradient_royal_one), to($gradient_royal_two));
+                                background: linear-gradient(-180deg, $gradient_royal_one 0%, $gradient_royal_two 100%);
+                                text-align: center;
+                                width: 100%;
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -webkit-box-pack: center;
+                                -ms-flex-pack: center;
+                                justify-content: center;
+                                -webkit-box-align: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                                min-height: 10rem;
+                                * {
+                                    margin: 0;
+                                }
+                                h4 {
+                                    font-size: 1.6rem;
+                                    font-weight: 600;
+                                }
+                                h2 {
+                                    font-size: 2.4rem;
+                                    font-weight: 600;
+                                    margin: .4rem 0;
+                                    small {
+                                        font-weight: 400;
+                                        font-size: 60%;
+                                    }
+                                }
+                                p {
+                                    font-size: 1.4rem;
+                                    font-weight: 400;
+                                }
+                                &.button {
+                                    &:hover {
+                                        &:not(.disable-hover) {
+                                            opacity: 1;
+                                        }
+                                    }
+                                    &.activated {
+                                        opacity: .8 !important;
+                                    }
+                                }
+                            }
+                            .price-discription {
+                                margin-bottom: 1.5rem;
+                                p {
+                                    font-size: 1rem;
+                                    color: $light;
+                                    opacity: .5;
+                                    margin: 0;
+                                    a {
+                                        color: $light;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ion-grid {
+        &.premium-list {
+            padding: 0;
+            ion-row {
+                ion-col {
+                    .benifit-items {
+                        position: relative;
+                        padding: $s10;
+                        padding-left: $s70;
+                        img {
+                            position: absolute;
+                            left: -2rem;
+                            top: -.5rem;
+                        }
+                        h2 {
+                            margin: 0;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                        }
+                        p {
+                            margin: 0.5rem 0 0 0;
+                            font-size: 1.5rem;
+                            line-height: 1.9rem;
+                        }
+                        &+li {
+                            margin-top: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    button {
+        &[item-free-trial] {
+            &.item {
+                .item-inner {
+                    padding: 0;
+                }
+                ion-icon {
+                    &[item-right] {
+                        font-size: 1.4rem;
+                        color: $light;
+                        margin: 0;
+                        width: 50px;
+                        height: 100%;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        background: -webkit-gradient(linear, left top, left bottom, from($gradient_royal_one), to($gradient_royal_two));
+                        background: linear-gradient(-180deg, $gradient_royal_one 0%, $gradient_royal_two 100%);
+                    }
+                }
+            }
+        }
+    }
+}

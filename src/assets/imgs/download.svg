@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="23px" viewBox="0 0 30 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>download</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="26.7980397%" y1="100%" x2="26.7980397%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-left/download" transform="translate(-8.000000, -19.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M32.34875,28.062 C32.08375,23.0135 28.0075,19 23,19 C17.99375,19 13.91625,23.0135 13.65125,28.062 C10.43875,28.6536111 8,31.5196667 8,34.9722222 C8,38.8528333 11.07875,42 14.875,42 L31.125,42 C34.92125,42 38,38.8528333 38,34.9722222 C38,31.5196667 35.56125,28.6536111 32.34875,28.062 Z M23,36.8888889 L18,31.7777778 L21.75,31.7777778 L21.75,26.6666667 L24.25,26.6666667 L24.25,31.7777778 L28,31.7777778 L23,36.8888889 Z" id="download"></path>
+        </g>
+    </g>
+</svg>

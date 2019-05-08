@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-happy-face-daily</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="26.7980397%" y1="100%" x2="26.7980397%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.05" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.25" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FAD961" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main" transform="translate(-44.000000, -298.000000)">
+            <g id="Group-3" transform="translate(20.000000, 273.000000)">
+                <g id="icon-happy-face-daily" transform="translate(24.000000, 25.000000)">
+                    <g id="Group-9-Copy">
+                        <circle id="Oval-6" fill="url(#linearGradient-2)" cx="25" cy="25" r="25"></circle>
+                        <path d="M34.1783333,28.2 C31.6583333,30.2019709 28.8883333,31.434984 25.0016667,31.434984 C21.1116667,31.434984 18.3416667,30.2019709 15.8216667,28.2 L15,29.0259177 C16.8783333,31.9074156 20.3333333,35 25.0016667,35 C29.6683333,35 33.1216667,31.9074156 35,29.0259177 L34.1783333,28.2 Z M19.1666667,18 C17.7866667,18 16.6666667,19.1407 16.6666667,20.55 C16.6666667,21.9593 17.7866667,23.1 19.1666667,23.1 C20.5466667,23.1 21.6666667,21.9593 21.6666667,20.55 C21.6666667,19.1407 20.5466667,18 19.1666667,18 Z M30.8333333,18 C29.4533333,18 28.3333333,19.1407 28.3333333,20.55 C28.3333333,21.9593 29.4533333,23.1 30.8333333,23.1 C32.2133333,23.1 33.3333333,21.9593 33.3333333,20.55 C33.3333333,19.1407 32.2133333,18 30.8333333,18 L30.8333333,18 Z" id="Shape" fill="#C66300" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

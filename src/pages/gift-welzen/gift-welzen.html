@@ -1,0 +1,68 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span class="logo">
+        <img src="assets/imgs/welzen-logo.svg" alt="">
+      </span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-1225>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <div class="page-heading" text-center>
+            Gift Welzen
+          </div>
+        </ion-col>
+        <ion-col col-12 col-lg-4>
+          <div class="price-cards">
+            <label for="yearly" tet-center>
+              <input type="radio" checked id="yearly" name="subscription">
+              <div class="price-card">
+                <ion-icon class="wz-save"></ion-icon>
+                <div class="content">
+                  <p>Yearly Subscription - 50% Off</p>
+                  <h3>$29.99</h3>
+                </div>
+              </div>
+            </label>
+            <label for="forever" tet-center>
+              <input type="radio" id="forever" name="subscription">
+              <div class="price-card">
+                <ion-icon class="wz-save"></ion-icon>
+                <div class="content">
+                  <p>Forever - 50% Off</p>
+                  <h3>$59.99</h3>
+                </div>
+              </div>
+            </label>
+            <p class="discriptions">Gift subscriptions are billed in one payment at the time of purchase and are not automatically renewed.</p>
+          </div>
+        </ion-col>
+        <ion-col col-12 col-lg-8>
+          <div class="desktop-right">
+            <div class="form-content">
+              <h4>Let your loved one’s journey into a happier and healthier life.</h4>
+              <ion-list no-lines form-list mode="ios">
+                <ion-item>
+                  <ion-label floating>Recipent's Name</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label floating>Recipent's Email</ion-label>
+                  <ion-input type="email"></ion-input>
+                </ion-item>
+
+              </ion-list>
+              <button ion-button button-forms max-width-335 block mode="ios">Redeem Code </button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

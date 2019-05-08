@@ -1,0 +1,19 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Teams</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <p>What’s your team’s name?</p>
+    <ion-list mode="ios" no-lines form-list>
+      <ion-item>
+        <ion-label floating>Team Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block button-forms mode="ios">Continue</button>
+  </div>
+</ion-content>

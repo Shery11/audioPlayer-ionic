@@ -1,0 +1,36 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Reminders</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-960>
+    <p class="mt-0">Set a gentle reminder for your daily practice. Our suggestion is first thing in the morning.</p>
+    <ion-list no-lines mode="ios" list-custom class="mb-20">
+      <ion-item mode="md">
+        <ion-label>
+          <h2>Reminders</h2>
+        </ion-label>
+        <ion-toggle mode="md" custom-toggle [(ngModel)]="activeReminder"  (ionChange)="turnOnOffReminder()" ></ion-toggle>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngFor="let reminder of reminders" mode="ios" no-lines button-list >
+    <ion-item mode="ios" *ngIf="activeReminder">
+        <ion-icon class="wz-time" item-left></ion-icon>
+        <ion-icon class="wz-right-arrow" item-right></ion-icon>
+        <ion-datetime (ionChange)="addReminder(reminder)" displayFormat="h:mm a" mode="ios" pickerFormat="h mm a" [(ngModel)]="reminder.time"></ion-datetime>
+    </ion-item>
+  </ion-list>
+  </div>
+</ion-content>
+<!-- <ion-footer mode="ios" no-border *ngIf="isUserAvailable && !user.paid">
+  <ion-toolbar color="dark" unlock-btn>
+    <button ion-item no-lines mode="ios" (click)="openUnlock()">
+      <h2>
+      <ion-icon class="wz-premium premium"></ion-icon>7 Days Free Trial</h2>
+      <p>$59.99 per year after FREE 7-day trial</p>
+    </button>
+  </ion-toolbar>
+</ion-footer> -->

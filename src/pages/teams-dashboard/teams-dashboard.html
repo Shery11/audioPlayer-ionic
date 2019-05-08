@@ -1,0 +1,167 @@
+<ion-header mode="ios" no-border no-bg>
+  <ion-navbar mode="ios">
+    <ion-title mode="ios">
+      <span>Team Dashboard</span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="presentPopover($event)">
+        <ion-icon ios="ios-more" md="ios-more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngClass]="theme.css" padding>
+  <div max-width-1225>
+    <div class="page-title">Hi Group Name</div>
+    <p class="mt-0">Be a hearo, bring Welzen to your team. We offer 2 different way to do this.</p>
+    <button ion-button block button-forms mw-335 mode="ios">Invite Users</button>
+
+    <div class="sectopn-heading border button-right mt-30" clearfix>
+      <h2 class="card-heading">Dashboard</h2>
+      <button ion-button color="light" (click)="showInfoAlert()" btn-rt fade-30 clear>
+        <ion-icon class="wz-info"></ion-icon>
+      </button>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 col-md-6>
+          <h2 class="sub-titles">Meditation Time</h2>
+          <ul clearfix class="statistic-stutas">
+            <li>
+              <div class="meditation-time">
+                <img src="assets/imgs/longest.svg" alt="">
+                <h2>287</h2>
+                <p>Meditators</p>
+              </div>
+            </li>
+            <li>
+              <div class="meditation-time">
+                <img src="assets/imgs/sessions.svg" alt="">
+                <h2>9</h2>
+                <p>Sessions</p>
+              </div>
+            </li>
+            <li>
+              <div class="meditation-time">
+                <img src="assets/imgs/time.svg" alt="">
+                <h2>1h 17m</h2>
+                <p>Time</p>
+              </div>
+            </li>
+
+          </ul>
+
+        </ion-col>
+        <ion-col col-12 col-md-6>
+          <h2 class="sub-titles">Total Mood Checks</h2>
+          <ul clearfix class="total-mood-checks">
+            <li>
+              <div class="mood-type">
+                <img src="assets/imgs/mood-awful.svg" alt="">
+                <h2>1</h2>
+                <p>Awful</p>
+              </div>
+            </li>
+            <li>
+              <div class="mood-type">
+                <img src="assets/imgs/mood-down.svg" alt="">
+                <h2>3</h2>
+                <p>Down</p>
+              </div>
+            </li>
+            <li>
+              <div class="mood-type">
+                <img src="assets/imgs/mood-meh.svg" alt="">
+                <h2>9</h2>
+                <p>Meh</p>
+              </div>
+            </li>
+            <li>
+              <div class="mood-type">
+                <img src="assets/imgs/mood-content.svg" alt="">
+                <h2>7</h2>
+                <p>Content</p>
+              </div>
+            </li>
+            <li>
+              <div class="mood-type">
+                <img src="assets/imgs/mood-rad.svg" alt="">
+                <h2>25</h2>
+                <p>Rad</p>
+              </div>
+            </li>
+          </ul>
+        </ion-col>
+
+        <ion-col col-12 col-md-6>
+          <div class="sectopn-heading border button-right" clearfix>
+            <h2 class="card-heading">Most Listened Meditations</h2>
+            <button ion-button color="light" (click)="showInfoAlert()" btn-rt fade-30 clear>
+              <ion-icon large ios="ios-more" md="ios-more"></ion-icon>
+            </button>
+          </div>
+          <ion-list no-lines mode="ios">
+            <ion-item tet-wrap mode="ios">
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/covers/kindness-for-oneself.png">
+              </ion-thumbnail>
+              <h2>River Downstream</h2>
+              <p>Stress Serie</p>
+              <ion-icon ios="ios-arrow-forward" item-right md="ios-arrow-forward"></ion-icon>
+            </ion-item>
+            <ion-item tet-wrap mode="ios">
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/covers/kindness-for-oneself.png">
+              </ion-thumbnail>
+              <h2>Daily Happiness</h2>
+              <ion-icon ios="ios-arrow-forward" item-right md="ios-arrow-forward"></ion-icon>
+            </ion-item>
+            <ion-item tet-wrap mode="ios">
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/covers/kindness-for-oneself.png">
+              </ion-thumbnail>
+              <h2>River Downstream</h2>
+              <p>Stress Serie</p>
+              <ion-icon ios="ios-arrow-forward" item-right md="ios-arrow-forward"></ion-icon>
+            </ion-item>
+          </ion-list>
+
+        </ion-col>
+
+        <ion-col col-12 col-md-6>
+          <div class="sectopn-heading border button-right" clearfix>
+            <h2 class="card-heading">Most Active Users</h2>
+            <button ion-button color="light" (click)="showInfoAlert()" btn-rt fade-30 clear>
+              <ion-icon large ios="ios-more" md="ios-more"></ion-icon>
+            </button>
+          </div>
+          <ion-list no-lines mode="ios">
+            <ion-item tet-wrap mode="ios">
+              <h2>Esteban Gonzalez</h2>
+              <p>Mood Check - Today, 11/14 at 09:19 PM</p>
+              <ion-icon ios="ios-arrow-forward" item-right md="ios-arrow-forward"></ion-icon>
+            </ion-item>
+            <ion-item tet-wrap mode="ios">
+
+              <h2>Beatriz Gonzalez</h2>
+              <p>Invited - Today, 11/14 at 09:19 PM</p>
+              <button item-right ion-button button-trans>RE-SEND INVITE</button>
+            </ion-item>
+            <ion-item tet-wrap mode="ios">
+              <h2>Esteban Gonzalez</h2>
+              <p>Mood Check - Today, 11/14 at 09:19 PM</p>
+              <ion-icon ios="ios-arrow-forward" item-right md="ios-arrow-forward"></ion-icon>
+            </ion-item>
+            <ion-item tet-wrap mode="ios">
+              <h2>Beatriz Gonzalez</h2>
+              <p>Invited - Today, 11/14 at 09:19 PM</p>
+              <ion-icon ios="ios-arrow-forward" item-right md="ios-arrow-forward"></ion-icon>
+            </ion-item>
+          </ion-list>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

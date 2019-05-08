@@ -1,0 +1,19 @@
+<ion-card mode="ios" imgbg (click)="goToPlay()" class="fadeIn">
+    <img src="{{meditationStat.albumCoverImg}}" alt="">
+    <div class="card-overlay"></div>
+    <ion-card-content>
+      <ion-item mode="ios" no-lines>
+        Meditation - {{meditation.beginTime | date: 'shortTime'}}
+        <!-- <button item-right ion-button clear color="light" (click)="presentPopover($event)">
+          <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+        </button> -->
+      </ion-item>
+      <div class="bottom-content">
+        <div class="title-meditation">
+          <img src="assets/imgs/icon-play.svg" alt="">
+          <h2 text-center>{{meditationStat.title}}</h2>
+          <p text-center>{{meditationStat.productTitle}}</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>

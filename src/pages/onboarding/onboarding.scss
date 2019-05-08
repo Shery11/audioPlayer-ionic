@@ -1,0 +1,200 @@
+page-onboarding {
+    .messages-main-continer {
+        margin: 0 0 .1rem;
+        padding: 0;
+        list-style: none;
+        li {
+            position: relative;
+            &[class*="message-"] {
+                padding-right: 66px;
+            }
+            ion-grid {
+                &.grid {
+                    padding: 2rem 0 0;
+                    ion-row {
+                        ion-col {
+                            &.col {
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .message {
+                display: inline-block;
+                position: relative;
+                border-radius: $c_radius;
+                border: 2px solid transparent;
+                text-align: left;
+                font-size: 1.5rem;
+                line-height: 2.4rem;
+                -webkit-box-shadow: $item_shadow;
+                box-shadow: $item_shadow;
+                .text {
+                    padding: .8rem 1.6rem;
+                }
+                img {
+                    display: block;
+                    border-radius: $c_radius;
+                }
+                &:after {
+                    top: .6rem;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-color: rgba(214, 64, 126, 0);
+                    border-width: 10px;
+                    margin-top: 0px;
+                }
+                ion-badge {
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    font-size: 1.8rem;
+                    font-weight: 900;
+                    top: -15px;
+                    left: -15px;
+                }
+            }
+            &.message-left {
+                text-align: right;
+                margin-top: 2rem;
+                .avatar {
+                    position: absolute;
+                    right: 0;
+                    width: $s50;
+                    height: $s50;
+                    img {
+                        border-radius: 50%;
+                        width: $s50;
+                        height: $s50;
+                        -webkit-box-shadow: $item_shadow;
+                        box-shadow: $item_shadow;
+                    }
+                }
+                .message {
+                    background: $new;
+                    border-color: $new;
+                    &:after {
+                        left: 100%;
+                        border-left-color: $new;
+                    }
+                }
+                &+.message-left {
+                    margin-top: .4rem;
+                    .message {
+                        &:after {
+                            border: none;
+                        }
+                    }
+                }
+            }
+            &.message-right {
+                margin-top: 2rem;
+                .message {
+                    background: $chat_bg;
+                    border-color: $chat_bg;
+                    &:after {
+                        right: 100%;
+                        border-right-color: $chat_bg;
+                    }
+                }
+                &+.message-right {
+                    margin-top: .4rem;
+                    .message {
+                        &:after {
+                            border: none;
+                        }
+                    }
+                }
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+            .pro-card {
+                &.adds-card {
+                    background: $alert_bg;
+                    min-height: 100px;
+                    >img {
+                        display: none;
+                    }
+                    .pro-card-inner {
+                        z-index: 2;
+                        &:before {
+                            font-family: 'welzen' !important;
+                            content: "\e929";
+                            width: 50px;
+                            opacity: .7;
+                            height: 100%;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            justify-content: center;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                        }
+                        .card-title {
+                            text-align: left;
+                            left: 0;
+                            right: 0;
+                            padding-left: 1rem;
+                            padding-right: 4rem;
+                            &:before {
+                                background: none;
+                            }
+                            h2 {
+                                font-size: 2.2rem;
+                            }
+                            p {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .color-palette-container {
+        margin-top: 2rem;
+        h3 {
+            font-size: 1.8rem;
+        }
+        .color-palette {
+            overflow: visible;
+            padding: 0;
+            button {
+                -webkit-box-shadow: $item_shadow;
+                box-shadow: $item_shadow;
+                border: none;
+                -webkit-transition: all .3s ease;
+                transition: all .3s ease;
+                opacity: 1;
+                &.active {
+                    border: 3px solid $light;
+                }
+                &.activated {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}

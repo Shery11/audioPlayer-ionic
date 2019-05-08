@@ -1,0 +1,98 @@
+page-change-theme {
+    ion-grid {
+        &.grid {
+            padding: 0;
+            ion-row {
+                margin: 0 -10px;
+                ion-col {
+                    padding: 10px;
+                    label {
+                        display: block;
+                        position: relative;
+                        cursor: pointer;
+                        .theme-view {
+                            position: relative;
+                            min-height: 190px;
+                            border-radius: $c_radius;
+                            box-shadow: $item_shadow;
+                            transition: all .3s ease;
+                            &:before {
+                                border: 0px solid transparent;
+                                transition: all .3s ease;
+                                content: '';
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                border-radius: $c_radius;
+                                position: absolute;
+                            }
+                            h5 {
+                                margin: 0;
+                                position: absolute;
+                                left: $s20;
+                                right: $s20;
+                                bottom: $s20;
+                                text-align: center;
+                                font-size: 1.6rem;
+                                text-shadow: $text_shadow;
+                            }
+                            .check {
+                                position: absolute;
+                                right: $s10;
+                                top: $s10;
+                                border-radius: 3rem;
+                                width: 2.4rem;
+                                height: 2.4rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 1px solid $border_check;
+                                transition: all .3s ease;
+                                i {
+                                    font-size: 1.3rem;
+                                    opacity: 0;
+                                    transition: all .3s ease;
+                                }
+                            }
+                            &.imagebg-theme{
+                                background-size: cover;
+                                background-position: center center;
+                                ion-icon{
+                                    &.type{
+                                        text-shadow: $item_shadow;
+                                        position: absolute;
+                                        left: 1.5rem;
+                                        top: 1rem;
+                                        z-index: 9;
+                                        font-size: 2.4rem;
+                                    }
+                                }
+                            }
+                        }
+                        input {
+                            &[type="radio"] {
+                                position: absolute;
+                                left: -99999999px;
+                                &:checked {
+                                    &+.theme-view {
+                                        &:before {
+                                            border-color: $light;
+                                            border-width: 2px;
+                                        }
+                                        .check {
+                                            border-color: $light;
+                                            i {
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
